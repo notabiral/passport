@@ -104,7 +104,7 @@ Settings → Pages → Build and deployment → Deploy from a branch → branch
 ## Disclaimer
 
 Informational only. Visa rules change without notice. Always confirm with
-the official source linked on each card, and with your airline, before you
+the official source linked on each entry, and with your airline, before you
 travel.
 
 ## License
