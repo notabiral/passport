@@ -100,10 +100,10 @@
     "destination_iso": "GE",
     "duration": "90 calendar days in any 180-day period",
     "held_visas": ["Australia", "Austria", "USA", "UAE", "New Zealand", "Bahrain", "Belgium", "Bulgaria", "Germany", "Denmark", "UK", "Spain", "Estonia", "Japan", "Ireland", "Iceland", "Israel", "Italy", "Canada", "Qatar", "Cyprus", "South Korea", "Latvia", "Lithuania", "Liechtenstein", "Luxembourg", "Malta", "Netherlands", "Norway", "Oman", "Poland", "Portugal", "Romania", "Greece", "France", "Saudi Arabia", "Slovakia", "Slovenia", "Hungary", "Finland", "Kuwait", "Sweden", "Switzerland", "Czech Republic", "Croatia"],
-    "notes": "Coordinator verified the Ordinance text on 2026-11-15: its 50 numbered items comprise the 45 country names in held_visas plus five territory groupings (Faroe Islands and Greenland; UK overseas territories; UK Crown Dependencies; Aruba and Netherlands Antilles; French Polynesia and New Caledonia), all covered by the Ordinance text read. The English text read is the 2015 original; a reported 2025 amendment imposing a 1-year-validity condition on GCC documents for 17 named nationalities could not be read (amending PDF failed to load) and Vietnam was not among the names reported. A reported GEL 30,000 health-insurance requirement from 1 Jan 2026 was not verified on any official page read and is excluded from conditions. The Wikipedia page for Vietnamese citizens carries no substitute-visa note for Georgia, so it cannot serve as fallback here.",
+    "notes": "Coordinator verified the Ordinance text on 2026-11-15: its 50 numbered items comprise the 45 country names in the held-visa list plus five territory groupings (Faroe Islands and Greenland; UK overseas territories; UK Crown Dependencies; Aruba and Netherlands Antilles; French Polynesia and New Caledonia), all covered by the Ordinance text read. The English text read is the 2015 original; a reported 2025 amendment imposing a 1-year-validity condition on GCC documents for 17 named nationalities could not be read (amending PDF failed to load) and Vietnam was not among the names reported. A reported GEL 30,000 health-insurance requirement from 1 Jan 2026 was not verified on any official page read and is excluded from conditions. The Wikipedia page for Vietnamese citizens carries no substitute-visa note for Georgia, so it cannot serve as fallback here.",
     "passport": "VN",
     "region": "Asia",
-    "requires": "Valid visa and/or residence permit of one of the countries listed in Government Ordinance No. 256 (see held_visas and notes)",
+    "requires": "Valid visa and/or residence permit of one of the countries listed in Government Ordinance No. 256 (see the held-visa list and notes)",
     "source": {
       "name": "Legislative Herald of Georgia — Government Ordinance No. 256 of 5 June 2015",
       "url": "https://matsne.gov.ge/en/document/view/2867377?impose=parallelEn&fullscreen=1"
@@ -122,7 +122,7 @@
     "destination_iso": "MX",
     "duration": "Up to 180 days",
     "held_visas": ["US", "Canada", "Japan", "UK", "Schengen"],
-    "notes": "The official page read says a visa of any type qualifies and states no multiple-entry requirement; secondary sources claiming a multiple-entry requirement were not followed (see Conflicts). Citizenship or permanent residence of the same places also qualifies. The same page lists a Mexico-approved APEC Business Travel Card as a further exemption; it is not a visa/permit and is not in held_visas.",
+    "notes": "The official page read says a visa of any type qualifies and states no multiple-entry requirement; secondary sources claiming a multiple-entry requirement were not followed (see Conflicts). Citizenship or permanent residence of the same places also qualifies. The same page lists a Mexico-approved APEC Business Travel Card as a further exemption; it is not a visa/permit and is not in the held-visa list.",
     "passport": "VN",
     "region": "Americas",
     "requires": "Valid, unexpired visa (any type) issued by the United States, Canada, Japan, the United Kingdom or a Schengen country, affixed in the passport; or citizenship or permanent residence of one of those places",

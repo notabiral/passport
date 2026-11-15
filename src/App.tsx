@@ -188,6 +188,7 @@ export default function App(){
   const [statusFilter, setStatusFilter] = useState<Rule["status"] | null>(null);
   const [showPolicy, setShowPolicy] = useState(false);
   const [showWhy, setShowWhy] = useState(false);
+  const [expandedHeld, setExpandedHeld] = useState<Record<string, boolean>>({});
 
   const counts = countsFor(passport.code);
   const total = counts.rules + counts.substitute + counts.transit;
@@ -274,7 +275,7 @@ export default function App(){
         <div className="mt-7 flex flex-col sm:flex-row gap-3">
           <label className="flex-1 flex items-center gap-3 bg-[var(--surface-2)] border border-[var(--line)] rounded-[18px] px-4 sm:px-5 h-[58px] focus-within:border-[var(--ink)]">
             <Search size={20} className="shrink-0 text-[var(--muted)]"/>
-            <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search a destination — try Japan, Mexico, Georgia…" className="w-full bg-transparent outline-none text-[15px] sm:text-[16px] placeholder:text-[var(--muted)]"/>
+            <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search a destination — try Japan" className="w-full bg-transparent outline-none text-[15px] sm:text-[16px] placeholder:text-[var(--muted)]"/>
             {query && <button aria-label="Clear search" onClick={()=>setQuery("")} className="p-1 rounded-full bg-[var(--surface-3)]"><X size={15}/></button>}
           </label>
           <div className="flex gap-2">
@@ -298,15 +299,15 @@ export default function App(){
               return (
                 <button key={p.code} onClick={()=>setPassport(p)} aria-pressed={active} className={`text-left rounded-[20px] border p-4 sm:p-5 transition ${active ? "bg-[var(--ink)] text-[var(--surface)] border-[var(--ink)] shadow-lg" : "bg-[var(--surface)] border-[var(--line)] card-hover"}`}>
                   <div className="flex items-start justify-between">
-                    <span className={`mono text-[12px] px-2 py-1 rounded-full ${active ? "bg-white/15 text-white" : "bg-[var(--surface-2)]"}`}>{p.code}</span>
+                    <span className={`mono text-[12px] px-2 py-1 rounded-full ${active ? "bg-white/15 text-white dark:bg-black/10 dark:text-black" : "bg-[var(--surface-2)]"}`}>{p.code}</span>
                     <span className={`w-6 h-6 rounded-full grid place-items-center text-[12px] ${active ? "bg-[var(--accent)] text-white" : "border border-[var(--line)]"}`}>{active ? "✓" : ""}</span>
                   </div>
                   <div className="mt-5 sm:mt-7 font-bold text-[22px] sm:text-[28px] leading-none tracking-tight">{p.name}</div>
                   <div className="mt-2 flex items-baseline gap-2">
                     <span className="text-[28px] sm:text-[34px] font-bold leading-none">{p.henley_score}</span>
-                    <span className={`text-[12px] ${active ? "text-white/70" : "text-[var(--muted)]"}`}>Henley score</span>
+                    <span className={`text-[12px] ${active ? "text-white/70 dark:text-black/60" : "text-[var(--muted)]"}`}>Henley score</span>
                   </div>
-                  <div className={`mono text-[11px] mt-3 pt-3 border-t ${active ? "border-white/20 text-white/80" : "border-[var(--line)] text-[var(--muted)]"}`}>{tot} verified entries for this passport</div>
+                  <div className={`mono text-[11px] mt-3 pt-3 border-t ${active ? "border-white/20 text-white/80 dark:border-black/20 dark:text-black/70" : "border-[var(--line)] text-[var(--muted)]"}`}>{tot} verified entries for this passport</div>
                 </button>
               );
             })}
@@ -335,7 +336,7 @@ export default function App(){
                   {id:"transit", label:"Transit visa", meta:`${counts.transit} entries`},
                 ].map(s=>(
                   <button key={s.id} onClick={()=>setSection(s.id as any)} className={`w-full flex items-center justify-between gap-2 text-left px-3 py-2.5 rounded-xl text-[13.5px] font-medium ${section===s.id ? "bg-[var(--ink)] text-[var(--surface)]" : "hover:bg-[var(--surface-2)]"}`}>
-                    <span>{s.label}</span><span className={`mono text-[11px] ${section===s.id ? "text-white/70" : "text-[var(--muted)]"}`}>{s.meta}</span>
+                    <span>{s.label}</span><span className={`mono text-[11px] ${section===s.id ? "text-white/70 dark:text-black/60" : "text-[var(--muted)]"}`}>{s.meta}</span>
                   </button>
                 ))}
               </div>
@@ -370,7 +371,7 @@ export default function App(){
             <div className="flex flex-wrap items-end justify-between gap-3 mb-4">
               <div>
                 <h2 className="font-bold tracking-tight text-[26px] sm:text-[32px] leading-none">{section==="go" ? "Where this passport goes" : section==="sub" ? "With another visa" : section==="transit" ? "Transit visa" : "The library"}</h2>
-                <p className="text-[var(--muted)] text-[13.5px] mt-1.5">{passport.name} · {section==="go" ? `${filteredGo.length} destinations` : section==="sub" ? `${counts.substitute} verified entries · ${SUB_DESTINATIONS} destinations in scope` : section==="transit" ? `${counts.transit} verified entries · ${TRANSIT_DESTINATIONS} destinations in scope` : `${total} verified entries across 3 sections`}</p>
+                <p className="text-[var(--muted)] text-[13.5px] mt-1.5">{passport.name} · {section==="go" ? `${filteredGo.length} destinations` : section==="sub" ? `${subFiltered.length} verified entries · ${SUB_DESTINATIONS} destinations in scope` : section==="transit" ? `${transitFiltered.length} verified entries · ${TRANSIT_DESTINATIONS} destinations in scope` : `${total} verified entries across 3 sections`}</p>
               </div>
               <div className="flex gap-1 bg-[var(--surface-2)] border border-[var(--line)] p-1 rounded-full text-[12.5px] font-semibold">
                 {(["all","go","sub","transit"] as const).map(s=>(
@@ -381,7 +382,7 @@ export default function App(){
 
             {(section==="all" || section==="go") && (
               <>
-                <div className="flex items-center justify-between mb-3"><h3 className="font-bold text-[16px] flex items-center gap-2"><Globe2 size={18} className="text-[var(--accent)]"/> Where this passport goes <span className="mono text-[11px] font-normal text-[var(--muted)]">{counts.rules} VERIFIED · NO PASSPORT-TO-ITSELF</span></h3><span className="mono text-[11px] text-[var(--muted)] hidden sm:block">ASEAN 10 + JAPAN + SOUTH KOREA</span></div>
+                <div className="flex items-center justify-between mb-3"><h3 className="font-bold text-[16px] flex items-center gap-2"><Globe2 size={18} className="text-[var(--accent)]"/> Where this passport goes <span className="mono text-[11px] font-normal text-[var(--muted)]">{filteredGo.length === counts.rules ? `${counts.rules} VERIFIED` : `${filteredGo.length} OF ${counts.rules}`} · NO PASSPORT-TO-ITSELF</span></h3><span className="mono text-[11px] text-[var(--muted)] hidden sm:block">ASEAN 10 + JAPAN + SOUTH KOREA</span></div>
                 {filteredGo.length===0 ? (
                   <div className="rounded-[20px] border border-dashed border-[var(--line)] p-8 text-center"><p className="font-bold">No destinations match “{query}” {region!=="All regions" ? `in ${region}` : ""}.</p><p className="text-[var(--muted)] text-[13px] mt-1">Try another name, or reset the filters.</p><button onClick={()=>{setQuery(""); setRegion("All regions"); setStatusFilter(null)}} className="mt-3 px-4 py-2 rounded-full bg-[var(--ink)] text-[var(--surface)] text-[13px] font-semibold">Reset filters</button></div>
                 ) : (
@@ -420,7 +421,7 @@ export default function App(){
 
             {(section==="all" || section==="sub") && (
               <div className="mt-8">
-                <div className="flex items-center justify-between mb-3"><h3 className="font-bold text-[16px] flex items-center gap-2"><BookOpen size={18} className="text-[var(--accent)]"/> With another visa <span className="mono text-[11px] font-normal text-[var(--muted)]">{counts.substitute} VERIFIED FOR {passport.code}</span></h3><span className="mono text-[11px] text-[var(--muted)] hidden sm:block">A HELD VISA OR PERMIT CHANGES THE ROUTE</span></div>
+                <div className="flex items-center justify-between mb-3"><h3 className="font-bold text-[16px] flex items-center gap-2"><BookOpen size={18} className="text-[var(--accent)]"/> With another visa <span className="mono text-[11px] font-normal text-[var(--muted)]">{subFiltered.length === counts.substitute ? `${counts.substitute} VERIFIED FOR ${passport.code}` : `${subFiltered.length} OF ${counts.substitute} FOR ${passport.code}`}</span></h3><span className="mono text-[11px] text-[var(--muted)] hidden sm:block">A HELD VISA OR PERMIT CHANGES THE ROUTE</span></div>
                 <p className="text-[16px] sm:text-[18px] font-bold leading-snug tracking-tight">Already hold a visa? It may unlock another country — <span className="text-[var(--accent)]">no new visa needed.</span></p>
                 <p className="text-[13.5px] text-[var(--muted)] leading-relaxed mt-2 mb-3">Read every card as <b className="text-[var(--ink)]">HOLD [visa you already have] → UNLOCK [country]</b>. A destination appears only when its substitute rule was checked for this passport. Already visa-free destinations and unverifiable rules are omitted — so the {counts.substitute} entries for {passport.name} are a subset of the {SUB_DESTINATIONS} destinations in scope below.</p>
                 {showGeorgiaExample && (
@@ -447,7 +448,7 @@ export default function App(){
                       <article key={d.destination_iso} className="card-hover rounded-[20px] border border-[var(--line)] bg-[var(--surface)] overflow-hidden flex flex-col">
                         <div className="p-4 pb-0">
                           <div className="flex items-center justify-between gap-2"><span className="mono text-[11px] px-2 py-1 rounded-full bg-[var(--surface-2)] border border-[var(--line)]">{displayRegion(d.region).toUpperCase()}</span><span className="mono text-[11px] text-[var(--muted)]">{d.destination_iso}</span></div>
-                          <p className="mt-3 text-[13px] font-semibold leading-snug"><span className="text-[var(--muted)]">HOLD</span> <span className="inline-flex flex-wrap gap-1 align-middle">{d.held_visas.slice(0,5).map((h)=>(<span key={h} className="px-1.5 py-0.5 rounded bg-[var(--surface-2)] border border-[var(--line)] text-[11.5px]">{h}</span>))}{d.held_visas.length>5 && <span className="text-[11.5px] text-[var(--muted)]">+{d.held_visas.length-5} more</span>}</span></p>
+                          <p className="mt-3 text-[13px] font-semibold leading-snug"><span className="text-[var(--muted)]">HOLD</span> <span className="inline-flex flex-wrap gap-1 align-middle">{(expandedHeld[passport.code + ":" + d.destination_iso] ? d.held_visas : d.held_visas.slice(0,5)).map((h)=>(<span key={h} className="px-1.5 py-0.5 rounded bg-[var(--surface-2)] border border-[var(--line)] text-[11.5px]">{h}</span>))}{d.held_visas.length>5 && <button type="button" aria-expanded={!!expandedHeld[passport.code + ":" + d.destination_iso]} onClick={()=>setExpandedHeld((prev)=>({...prev, [passport.code + ":" + d.destination_iso]: !prev[passport.code + ":" + d.destination_iso]}))} className="text-[11.5px] font-semibold text-[var(--accent)]">{expandedHeld[passport.code + ":" + d.destination_iso] ? "Show less" : `+${d.held_visas.length-5} more`}</button>}</span></p>
                           <p className="mt-1.5 flex items-center gap-1.5 font-bold text-[19px] leading-tight tracking-tight"><ArrowRight size={18} className="shrink-0 text-[var(--accent)]"/> UNLOCK {d.destination}</p>
                           <span className="inline-block mt-2 mono text-[11px] font-semibold px-2.5 py-1.5 rounded-full bg-emerald-600 text-white">NO VISA TO APPLY FOR</span>
                           <p className="text-[13px] leading-relaxed mt-2">{d.benefit}</p>
@@ -503,7 +504,7 @@ export default function App(){
 
             {(section==="all" || section==="transit") && (
               <div className="mt-8">
-                <div className="flex items-center justify-between mb-3"><h3 className="font-bold text-[16px] flex items-center gap-2"><Plane size={18} className="text-[var(--accent)]"/> Transit visa <span className="mono text-[11px] font-normal text-[var(--muted)]">{counts.transit} VERIFIED FOR {passport.code} · OFFICIAL SOURCES ONLY</span></h3><span className="mono text-[11px] text-[var(--muted)] hidden sm:block">EVEN TO STAY AIRSIDE</span></div>
+                <div className="flex items-center justify-between mb-3"><h3 className="font-bold text-[16px] flex items-center gap-2"><Plane size={18} className="text-[var(--accent)]"/> Transit visa <span className="mono text-[11px] font-normal text-[var(--muted)]">{transitFiltered.length === counts.transit ? `${counts.transit} VERIFIED FOR ${passport.code}` : `${transitFiltered.length} OF ${counts.transit} FOR ${passport.code}`} · OFFICIAL SOURCES ONLY</span></h3><span className="mono text-[11px] text-[var(--muted)] hidden sm:block">EVEN TO STAY AIRSIDE</span></div>
                 <p className="text-[13.5px] text-[var(--muted)] leading-relaxed mb-3">Places this passport can transit without a visa do not appear. The {counts.transit} entries for {passport.name} are a subset of the {TRANSIT_DESTINATIONS} destinations in scope below.</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
                   {transitFiltered.map((d)=>(
@@ -536,24 +537,24 @@ export default function App(){
 
             {/* COMPARE */}
             <section id="compare" className="mt-10 rounded-[24px] bg-[var(--ink)] text-[var(--surface)] p-5 sm:p-7 overflow-hidden">
-              <div className="flex flex-wrap items-end justify-between gap-3"><div><p className="mono text-[11px] tracking-widest text-white/60">2 · COMPARE</p><h3 className="font-bold tracking-tight text-[26px] sm:text-[32px] leading-none mt-1">How different<br/>the same world looks.</h3></div><p className="max-w-[320px] text-[13.5px] text-white/70 leading-relaxed">Henley scores are display context only. The entries themselves come from official sources wherever they could be read.</p></div>
+              <div className="flex flex-wrap items-end justify-between gap-3"><div><p className="mono text-[11px] tracking-widest text-white/60 dark:text-black/50">2 · COMPARE</p><h3 className="font-bold tracking-tight text-[26px] sm:text-[32px] leading-none mt-1">How different<br/>the same world looks.</h3></div><p className="max-w-[320px] text-[13.5px] text-white/70 dark:text-black/60 leading-relaxed">Henley scores are display context only. The entries themselves come from official sources wherever they could be read.</p></div>
               <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-3">
                 {PASSPORTS.map(p=>{
                   const c = countsFor(p.code);
                   const tot = c.rules + c.substitute + c.transit;
                   const active = p.code===passport.code;
                   return (
-                    <button key={p.code} onClick={()=>setPassport(p)} className={`text-left rounded-[18px] p-4 border ${active ? "bg-[var(--accent)] border-[var(--accent)] text-white" : "bg-white/10 border-white/15 hover:bg-white/15"}`}>
-                      <div className="mono text-[11px] text-white/70">{p.code} · {active ? "VIEWING" : "TAP TO VIEW"}</div>
+                    <button key={p.code} onClick={()=>setPassport(p)} className={`text-left rounded-[18px] p-4 border ${active ? "bg-[var(--accent)] border-[var(--accent)] text-white" : "bg-white/10 border-white/15 hover:bg-white/15 dark:bg-black/5 dark:border-black/15 dark:hover:bg-black/10"}`}>
+                      <div className="mono text-[11px] text-white/70 dark:text-black/60">{p.code} · {active ? "VIEWING" : "TAP TO VIEW"}</div>
                       <div className="font-bold text-[20px] mt-2">{p.name}</div>
-                      <div className="mt-3 flex items-baseline gap-1"><span className="text-[32px] font-bold leading-none">{p.henley_score}</span><span className="text-[12px] text-white/70">Henley</span></div>
-                      <div className="mono text-[11px] mt-2 pt-2 border-t border-white/20">{tot} verified entries</div>
-                      <div className="text-[12px] text-white/75 mt-1">{c.rules} + {c.substitute} + {c.transit}</div>
+                      <div className="mt-3 flex items-baseline gap-1"><span className="text-[32px] font-bold leading-none">{p.henley_score}</span><span className="text-[12px] text-white/70 dark:text-black/60">Henley</span></div>
+                      <div className="mono text-[11px] mt-2 pt-2 border-t border-white/20 dark:border-black/20">{tot} verified entries</div>
+                      <div className="text-[12px] text-white/75 dark:text-black/70 mt-1">{c.rules} + {c.substitute} + {c.transit}</div>
                     </button>
                   );
                 })}
               </div>
-              <p className="mono text-[11px] text-white/50 mt-4">TOTALS: {RULES.length} WHERE IT GOES · {SUB_RULES.length} WITH ANOTHER VISA · {TRANSIT_RULES.length} TRANSIT · {TOTAL_ENTRIES} VERIFIED ENTRIES</p>
+              <p className="mono text-[11px] text-white/50 dark:text-black/45 mt-4">TOTALS: {RULES.length} WHERE IT GOES · {SUB_RULES.length} WITH ANOTHER VISA · {TRANSIT_RULES.length} TRANSIT · {TOTAL_ENTRIES} VERIFIED ENTRIES</p>
             </section>
 
             {/* POLICY */}
