@@ -1,4 +1,6 @@
-/* Passport Switch: load JSON, render the selected passport's rules. */
+/* Passport Switch: load JSON, render the selected passport's ledger.
+   Three sections: main rules, "with another visa", transit. Search filters
+   all three by destination; the status filter applies to main rules only. */
 (function () {
   "use strict";
 
@@ -17,10 +19,21 @@
     eta: "Electronic travel authorisation before travel. Not a visa, but still required.",
     visa_required: "Apply at an embassy or consulate before travel."
   };
+  var TRANSIT_ORDER = ["transit_visa", "transit_visa_restricted"];
+  var TRANSIT_LABELS = {
+    transit_visa: "Transit visa — exemption with a held visa",
+    transit_visa_restricted: "Transit visa — no exemption"
+  };
+  var TRANSIT_NOTES = {
+    transit_visa: "A transit visa is needed to stay airside, unless you hold one of the listed visas or permits.",
+    transit_visa_restricted: "A transit visa is needed to stay airside, with no held-visa exemption."
+  };
 
   var state = { passport: "VN", status: "all", query: "" };
   var passports = [];
   var rules = [];
+  var substitute = [];
+  var transit = [];
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -31,28 +44,52 @@
 
   function escapeQuery(q) { return q.trim().toLowerCase(); }
 
-  function filteredRules() {
+  function matchesQuery(item) {
     var q = escapeQuery(state.query);
-    return rules.filter(function (r) {
-      if (r.passport !== state.passport) return false;
+    return !q || item.destination.toLowerCase().indexOf(q) !== -1;
+  }
+
+  function forPassport(list) {
+    return list.filter(function (r) { return r.passport === state.passport; });
+  }
+
+  function filteredRules() {
+    return forPassport(rules).filter(function (r) {
       if (state.status !== "all" && r.status !== state.status) return false;
-      if (q && r.destination.toLowerCase().indexOf(q) === -1) return false;
-      return true;
+      return matchesQuery(r);
     });
+  }
+
+  function filteredSubstitute() {
+    return forPassport(substitute).filter(matchesQuery);
+  }
+
+  function filteredTransit() {
+    return forPassport(transit).filter(matchesQuery);
+  }
+
+  function byDestination(a, b) { return a.destination.localeCompare(b.destination); }
+
+  function countsFor(code) {
+    function n(list) {
+      return list.filter(function (r) { return r.passport === code; }).length;
+    }
+    return { rules: n(rules), substitute: n(substitute), transit: n(transit) };
   }
 
   function renderPicker() {
     var picker = document.getElementById("passport-picker");
     picker.innerHTML = "";
     passports.forEach(function (p) {
-      var btn = el("button", "passport-btn");
+      var c = countsFor(p.code);
+      var btn = el("button", "plate");
       btn.type = "button";
       btn.setAttribute("aria-pressed", p.code === state.passport ? "true" : "false");
       btn.dataset.code = p.code;
-      var name = el("span", null, p.name + " passport");
-      var sub = el("small", null, "Henley " + p.henley_score + " destinations (" + p.henley_as_of + ")");
-      btn.appendChild(name);
-      btn.appendChild(sub);
+      btn.appendChild(el("span", "plate-code", p.code));
+      btn.appendChild(el("span", "plate-name", p.name + " passport"));
+      btn.appendChild(el("small", null, "Henley " + p.henley_score + " destinations (" + p.henley_as_of + ")"));
+      btn.appendChild(el("small", null, c.rules + " destinations · " + c.substitute + " another-visa · " + c.transit + " transit"));
       btn.addEventListener("click", function () {
         state.passport = p.code;
         renderPicker();
@@ -60,89 +97,211 @@
       });
       picker.appendChild(btn);
     });
-    var current = passports.filter(function (p) { return p.code === state.passport; })[0];
-    var heading = document.getElementById("current-passport");
-    if (current) heading.textContent = "Travelling on a " + current.name + " passport";
   }
 
-  function renderCard(r) {
-    var card = el("article", "card");
-    card.dataset.status = r.status;
-    card.appendChild(el("h3", null, r.destination));
-    var meta = el("div", "meta");
-    var badge = el("span", "badge", STATUS_LABELS[r.status] || r.status);
-    badge.dataset.status = r.status;
-    meta.appendChild(badge);
-    meta.appendChild(el("span", "duration", r.duration));
-    if (r.fee) meta.appendChild(el("span", "fee", "Fee: " + r.fee));
-    card.appendChild(meta);
-    if (r.conditions && r.conditions.length) {
-      var listTitle = el("p", null, "Conditions");
-      listTitle.style.margin = "6px 0 0";
-      listTitle.style.fontWeight = "700";
-      listTitle.style.fontSize = "0.9rem";
-      card.appendChild(listTitle);
+  function currentPassport() {
+    var found = passports.filter(function (p) { return p.code === state.passport; })[0];
+    return found || null;
+  }
+
+  function appendConditions(row, item) {
+    if (item.conditions && item.conditions.length) {
+      row.appendChild(el("p", "conditions-title", "Conditions"));
       var ul = el("ul");
-      r.conditions.forEach(function (c) { ul.appendChild(el("li", null, c)); });
-      card.appendChild(ul);
+      item.conditions.forEach(function (c) { ul.appendChild(el("li", null, c)); });
+      row.appendChild(ul);
     }
-    if (r.extension) card.appendChild(el("p", "extension", "Extension: " + r.extension));
-    if (r.notes) card.appendChild(el("p", "notes", r.notes));
+  }
+
+  function appendSourceLine(row, item) {
     var src = el("p", "source-line");
-    src.appendChild(document.createTextNode("Verified " + r.verified + " · "));
-    var a = el("a", null, r.source.name);
-    a.href = r.source.url;
+    src.appendChild(document.createTextNode("Verified " + item.verified + " · "));
+    if (/wikipedia/i.test(item.source.name)) {
+      src.appendChild(el("span", "wiki-flag", "Wikipedia source · "));
+    }
+    var a = el("a", null, item.source.name);
+    a.href = item.source.url;
     a.target = "_blank";
     a.rel = "noopener noreferrer";
     src.appendChild(a);
-    card.appendChild(src);
-    return card;
+    row.appendChild(src);
   }
 
-  function renderResults() {
-    var container = document.getElementById("results");
-    var countEl = document.getElementById("result-count");
-    container.innerHTML = "";
+  function renderMainRow(r, headingTag) {
+    var row = el("article", "row");
+    row.dataset.status = r.status;
+    var head = el("div", "row-head");
+    head.appendChild(el(headingTag, null, r.destination));
+    var chip = el("span", "chip", STATUS_LABELS[r.status] || r.status);
+    chip.dataset.status = r.status;
+    head.appendChild(chip);
+    head.appendChild(el("span", "duration", r.duration));
+    if (r.fee) head.appendChild(el("span", "fee", "Fee: " + r.fee));
+    row.appendChild(head);
+    appendConditions(row, r);
+    if (r.extension) row.appendChild(el("p", "extension", "Extension: " + r.extension));
+    if (r.notes) row.appendChild(el("p", "notes", r.notes));
+    appendSourceLine(row, r);
+    return row;
+  }
+
+  function appendHeldChips(row, item) {
+    if (item.held_visas && item.held_visas.length) {
+      var held = el("div", "held");
+      held.appendChild(el("span", "held-label", "Held visa:"));
+      item.held_visas.forEach(function (h) { held.appendChild(el("span", "held-chip", h)); });
+      row.appendChild(held);
+    }
+  }
+
+  function renderExtraRow(item, headingTag, isTransit) {
+    var row = el("article", "row");
+    if (isTransit) row.dataset.status = item.status;
+    var head = el("div", "row-head");
+    head.appendChild(el(headingTag, null, item.destination));
+    if (isTransit) {
+      var chip = el("span", "chip", TRANSIT_LABELS[item.status] || item.status);
+      chip.dataset.status = item.status;
+      head.appendChild(chip);
+    } else {
+      head.appendChild(el("span", "chip chip-neutral", "With another visa"));
+    }
+    head.appendChild(el("span", "duration", item.duration));
+    if (item.fee) head.appendChild(el("span", "fee", "Fee: " + item.fee));
+    row.appendChild(head);
+    var device = el("p", "device");
+    device.appendChild(el("span", "device-hold", "Hold: " + item.requires));
+    var arrow = el("span", "device-arrow", "→");
+    arrow.setAttribute("aria-hidden", "true");
+    device.appendChild(arrow);
+    device.appendChild(el("span", "device-benefit", item.benefit));
+    row.appendChild(device);
+    appendHeldChips(row, item);
+    appendConditions(row, item);
+    if (item.notes) row.appendChild(el("p", "notes", item.notes));
+    appendSourceLine(row, item);
+    return row;
+  }
+
+  function sectionHead(num, title, countText) {
+    var head = el("div", "section-head");
+    head.appendChild(el("span", "section-num", num));
+    head.appendChild(el("h2", null, title));
+    head.appendChild(el("span", "section-count", countText));
+    return head;
+  }
+
+  function emptyNote(text) {
+    return el("div", "empty", text);
+  }
+
+  function renderMainSection(container) {
+    var section = el("section", "ledger-section");
     var list = filteredRules();
-    var totalForPassport = rules.filter(function (r) { return r.passport === state.passport; }).length;
-    countEl.textContent = list.length + " of " + totalForPassport + " verified destinations shown";
+    var total = forPassport(rules).length;
+    section.appendChild(sectionHead("01", "Where this passport goes", list.length + " of " + total + " shown"));
+    var current = currentPassport();
+    if (current) {
+      section.appendChild(el("p", "current-line", "Travelling on a " + current.name + " passport"));
+    }
+    document.getElementById("result-count").textContent =
+      list.length + " of " + total + " verified destinations shown";
     if (!list.length) {
-      var empty = el("div", "empty", "No verified destinations match this view. Unverified destinations are omitted on purpose: see the coverage note below.");
-      container.appendChild(empty);
+      section.appendChild(emptyNote("No verified destinations match this view. Unverified destinations are omitted on purpose: see the coverage note below."));
+      container.appendChild(section);
       return;
     }
     STATUS_ORDER.forEach(function (status) {
       var group = list.filter(function (r) { return r.status === status; });
       if (!group.length) return;
-      group.sort(function (a, b) { return a.destination.localeCompare(b.destination); });
-      var title = el("h2", "group-title", STATUS_LABELS[status]);
+      group.sort(byDestination);
+      var title = el("h3", "group-title", STATUS_LABELS[status]);
       title.appendChild(el("span", "group-count", "(" + group.length + ")"));
-      container.appendChild(title);
-      container.appendChild(el("p", "group-note", STATUS_NOTES[status]));
-      var grid = el("div", "grid");
-      group.forEach(function (r) { grid.appendChild(renderCard(r)); });
-      container.appendChild(grid);
+      section.appendChild(title);
+      section.appendChild(el("p", "group-note", STATUS_NOTES[status]));
+      var rows = el("div", "rows");
+      group.forEach(function (r) { rows.appendChild(renderMainRow(r, "h4")); });
+      section.appendChild(rows);
     });
+    container.appendChild(section);
+  }
+
+  function renderSubstituteSection(container) {
+    var section = el("section", "ledger-section");
+    var list = filteredSubstitute().sort(byDestination);
+    var total = forPassport(substitute).length;
+    section.appendChild(sectionHead("02", "With another visa", list.length + " of " + total + " shown"));
+    section.appendChild(el("p", "section-note", "Extra doors: places this passport can enter without their own visa, when a valid visa or permit for another country is already in the passport."));
+    if (!total) {
+      section.appendChild(emptyNote("No verified entries for this passport yet. A destination appears here only when its substitute-visa rule has been checked for this passport."));
+    } else if (!list.length) {
+      section.appendChild(emptyNote("No destinations in this section match your search."));
+    } else {
+      var rows = el("div", "rows");
+      list.forEach(function (item) { rows.appendChild(renderExtraRow(item, "h3", false)); });
+      section.appendChild(rows);
+    }
+    container.appendChild(section);
+  }
+
+  function renderTransitSection(container) {
+    var section = el("section", "ledger-section");
+    var list = filteredTransit();
+    var total = forPassport(transit).length;
+    section.appendChild(sectionHead("03", "Transit visa", list.length + " of " + total + " shown"));
+    section.appendChild(el("p", "section-note", "Places where this passport needs a visa even to stay airside and change planes — and whether a visa you already hold gets you through without one. Places this passport can transit without a visa do not appear here."));
+    if (!total) {
+      section.appendChild(emptyNote("No verified entries for this passport yet. A destination appears here only when its transit requirement has been checked for this passport."));
+    } else if (!list.length) {
+      section.appendChild(emptyNote("No destinations in this section match your search."));
+    } else {
+      TRANSIT_ORDER.forEach(function (status) {
+        var group = list.filter(function (r) { return r.status === status; });
+        if (!group.length) return;
+        group.sort(byDestination);
+        var title = el("h3", "group-title", TRANSIT_LABELS[status]);
+        title.appendChild(el("span", "group-count", "(" + group.length + ")"));
+        section.appendChild(title);
+        section.appendChild(el("p", "group-note", TRANSIT_NOTES[status]));
+        var rows = el("div", "rows");
+        group.forEach(function (item) { rows.appendChild(renderExtraRow(item, "h4", true)); });
+        section.appendChild(rows);
+      });
+    }
+    container.appendChild(section);
+  }
+
+  function renderResults() {
+    var container = document.getElementById("results");
+    container.innerHTML = "";
+    renderMainSection(container);
+    renderSubstituteSection(container);
+    renderTransitSection(container);
   }
 
   function renderCoverage() {
     var box = document.getElementById("coverage");
     if (!box) return;
-    var counts = {};
-    passports.forEach(function (p) { counts[p.code] = 0; });
-    rules.forEach(function (r) { counts[r.passport] = (counts[r.passport] || 0) + 1; });
     box.innerHTML = "";
     box.appendChild(el("strong", null, "Coverage in this version: "));
     var parts = passports.map(function (p) {
-      return p.name + " " + (counts[p.code] || 0) + " destinations";
+      var c = countsFor(p.code);
+      return p.name + " " + c.rules + " destinations, " + c.substitute + " with another visa, " + c.transit + " transit";
     });
-    box.appendChild(document.createTextNode(parts.join(" · ") + ". Destinations with no verified official source are omitted, not guessed."));
+    box.appendChild(document.createTextNode(parts.join(" · ") + ". Entries with no verified source are omitted, not guessed."));
   }
 
   function showError(message) {
     var container = document.getElementById("results");
     container.innerHTML = "";
     container.appendChild(el("div", "error", message));
+  }
+
+  function loadJson(path, label) {
+    return fetch(path).then(function (res) {
+      if (!res.ok) throw new Error("Could not load " + label);
+      return res.json();
+    });
   }
 
   function init() {
@@ -158,17 +317,15 @@
     });
 
     Promise.all([
-      fetch("data/passports.json").then(function (res) {
-        if (!res.ok) throw new Error("Could not load passports.json");
-        return res.json();
-      }),
-      fetch("data/rules.json").then(function (res) {
-        if (!res.ok) throw new Error("Could not load rules.json");
-        return res.json();
-      })
-    ]).then(function (pair) {
-      passports = pair[0];
-      rules = pair[1];
+      loadJson("data/passports.json", "passports.json"),
+      loadJson("data/rules.json", "rules.json"),
+      loadJson("data/substitute_visa.json", "substitute_visa.json"),
+      loadJson("data/transit.json", "transit.json")
+    ]).then(function (parts) {
+      passports = parts[0];
+      rules = parts[1];
+      substitute = parts[2];
+      transit = parts[3];
       if (passports.length && !passports.some(function (p) { return p.code === state.passport; })) {
         state.passport = passports[0].code;
       }

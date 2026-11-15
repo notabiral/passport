@@ -1,0 +1,363 @@
+[
+  {
+    "benefit": "None: no held foreign visa or permit removes the transit-visa requirement for Vietnamese holders",
+    "conditions": [
+      "Transit visa required even if remaining on the same aircraft in the same airport, and even if staying in the transit lounge without leaving the airport",
+      "Confirmed onward booking to leave Australia for another country within 72 hours of arrival",
+      "Travel document, visa or other authority needed to enter the destination country",
+      "Transit Without Visa is nationality-based (8-hour, stay-in-transit-lounge scheme) and Vietnam is not on the eligible-country list"
+    ],
+    "destination": "Australia",
+    "destination_iso": "AU",
+    "duration": "Up to 72 hours",
+    "held_visas": [],
+    "notes": "The full Transit Without Visa eligible-country list was read on the Home Affairs page cited as source; Vietnam is absent (the list runs from Andorra to Vatican, including Indonesia, Malaysia, Philippines, Singapore and Thailand, but not Vietnam). The 72-hour limit, the free-of-charge status, and the 'required even in the transit lounge' rule were read on the Australian High Commission Honiara page: https://solomonislands.embassy.gov.au/honi/Visas_and_Migration.html (read 2026-11-15). Holding a valid Australian visa, an ETA/eVisitor-eligible passport or a New Zealand passport removes the need; none of these is a held foreign-visa exemption for a Vietnamese ordinary holder, so the status is transit_visa_restricted.",
+    "passport": "VN",
+    "region": "Oceania",
+    "requires": "Transit visa (subclass 771)",
+    "source": {
+      "name": "Department of Home Affairs, Australia — Travellers eligible to transit without a visa (TWOV)",
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/transit-771/travellers-eligible-to-transit-without-visa/"
+    },
+    "status": "transit_visa_restricted",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "None: no held foreign visa or permit removes the transit-visa requirement for Vietnamese holders",
+    "conditions": [
+      "Connecting between 2 international flights at one or more Canadian airports",
+      "Valid passport required",
+      "A valid Canadian visitor visa covers transit; this is a Canadian visa, not a held foreign-visa exemption",
+      "Cannot apply for a transit visa if the transit will last longer than 48 hours, if visiting Canada, or if crossing by bus, car, train, boat or cruise ship — a visitor visa is needed instead",
+      "Transit Without Visa is limited to passport holders of China, Indonesia, the Philippines, Thailand and Taiwan meeting programme conditions; Vietnam is not eligible"
+    ],
+    "destination": "Canada",
+    "destination_iso": "CA",
+    "duration": "Transit of 48 hours or less",
+    "held_visas": [],
+    "notes": "Vietnam is named in the visa-required list on the official Canada.ca entry-requirements page (https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/entry-requirements-country.html, read 2026-11-15) with no eTA-eligibility annotation, and that page states visa-required citizens need a valid visitor visa and passport 'to visit or transit through Canada'. The transit-visa rule and the five-country Transit Without Visa list were read on the IRCC page cited as source.",
+    "passport": "VN",
+    "region": "Americas",
+    "requires": "Transit visa",
+    "source": {
+      "name": "Immigration, Refugees and Citizenship Canada — Transit visa: Who can apply",
+      "url": "https://ircc.canada.ca/english/visit/transit-apply-who.asp"
+    },
+    "status": "transit_visa_restricted",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Transit through a Mexican airport without a Mexican visitor visa when holding an exempting visa or residence document",
+    "conditions": [
+      "The visa (or exempting document) must be held before departure from the country of origin; it is required to board any flight to Mexico",
+      "Exempting residence: document proving permanent residence in Canada, the United States, Japan, the United Kingdom, any Schengen country, or a Pacific Alliance member country (Chile, Colombia, Peru)",
+      "Exempting visa: valid visa for Canada, the United States, Japan, the United Kingdom or any Schengen country"
+    ],
+    "destination": "Mexico",
+    "destination_iso": "MX",
+    "duration": "Immediate airport transit (no time limit stated in the communiqué)",
+    "held_visas": ["US", "Canada", "Japan", "UK", "Schengen"],
+    "notes": "Source is the joint SEGOB-SRE-INM communiqué of 21 Oct 2023 (in force 22 Oct 2023): foreigners whose nationalities require a visa for Mexico must hold the corresponding visitor visa even for immediate transit through airports. SOURCING CAVEAT: the INM visa-required country list page was read (https://www.inm.gob.mx/gobmx/word/index.php/paises-requieren-visa-para-mexico/, 2026-11-15) and its framework and alternatives match the communiqué, but the country list itself renders as an image, so Vietnam's presence on it could not be confirmed from extracted text; Vietnam's visa-required status for Mexico is corroborated by the 1 March 2024 INM list as republished (Vietnam included), the Wikipedia row for Mexico, and the consulate exemption framework. The coordinator may wish to re-verify against the INM infographic. The communiqué URL is cited in https form; the https variant was verified reachable on 2026-11-15. A related INM page confirming the same alternatives was also read: the INM list page above. Do not confuse with the A2 Mexico entry: same exemption, different question (transit vs entry).",
+    "passport": "VN",
+    "region": "Americas",
+    "requires": "Mexican visitor visa (visitante sin permiso para realizar actividades remuneradas), even for immediate airport transit, unless holding an exempting visa or residence document",
+    "source": {
+      "name": "Government of Mexico (SEGOB-SRE-INM) — Información para personas extranjeras en tránsito por México, 21 Oct 2023",
+      "url": "https://www.gob.mx/sre/prensa/informacion-para-personas-extranjeras-en-transito-por-mexico-349304?state=published"
+    },
+    "status": "transit_visa",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Apply for an NZeTA instead of a Transit Visa when travelling to or from Australia",
+    "conditions": [
+      "Auckland International Airport only; there is no transit area at other New Zealand airports",
+      "Must stay in the transit area at all times; cannot leave to collect bags or stay at a hotel",
+      "When travelling TO Australia, must also hold a valid Australian visa",
+      "Must meet good-character requirements, otherwise a Transit Visa is required",
+      "Genuine transit intent: evidence of travel arrangements, itinerary and onward travel, and the right to enter the destination country",
+      "Passport valid at least 3 months after the intended departure from New Zealand"
+    ],
+    "destination": "New Zealand",
+    "destination_iso": "NZ",
+    "duration": "Up to 24 hours",
+    "held_visas": ["Australia"],
+    "notes": "Vietnam is on neither the 60-country visa-waiver list nor the 26-country transit visa-waiver list, both read in full in the official INZ 1018 Visitor Visa Guide (October 2026): https://www.immigration.govt.nz/assets/inz/documents/forms-and-guides/inz1018.pdf — 'Transit passengers from all other countries must apply for a transit visa.' The to/from-Australia NZeTA route is stated on the official Transit Visa page read; one secondary guide doubted a blanket form of this rule, but the official page governs (see Conflicts). A current New Zealand visa or Australian citizenship also removes the requirement; neither applies to the ordinary Vietnamese holder.",
+    "passport": "VN",
+    "region": "Oceania",
+    "requires": "Transit Visa, unless travelling to or from Australia (NZeTA instead, with a valid Australian visa when travelling to Australia)",
+    "source": {
+      "name": "Immigration New Zealand — Transit Visa",
+      "url": "https://www.immigration.govt.nz/visas/transit-visa/"
+    },
+    "status": "transit_visa",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Transit airside without a UK visa when holding an exempting document",
+    "conditions": [
+      "Arrive and depart by air",
+      "Confirmed onward flight departing the same day from the same airport",
+      "Hold the correct documents for the destination (for example a visa for that country if required)",
+      "Cannot transit airside to the Republic of Ireland or anywhere within the Common Travel Area",
+      "Other countries' e-visas or e-residence permits are acceptable only if the airline can verify them with the issuing country",
+      "The decision to allow transit without a visa is made by an immigration officer at the UK border"
+    ],
+    "destination": "United Kingdom",
+    "destination_iso": "GB",
+    "duration": "Same-day onward flight from the same airport",
+    "held_visas": ["Australia", "Canada", "New Zealand", "USA", "EEA/Switzerland", "Ireland"],
+    "notes": "Vietnam appears in the visa-national list on the official Home Office poster (August 2026) with footnote (5), which exempts only diplomatic/official passport holders from the airside visa requirement and is therefore irrelevant to ordinary passports. Exempting documents as read: valid visa for Australia, Canada, New Zealand or the USA (whether or not travelling to or from those countries); an expired such visa on a reasonable journey FROM that country if under 6 months since last entry there; valid permanent residence permit from Australia, Canada (issued after 28 June 2002), New Zealand or the USA (issued after 21 April 1998) plus the stated US immigrant-visa variants; valid EEA/Switzerland common-format residence permit or category D visa; valid Irish biometric visa endorsed BC or BC BIVS (for transit to a destination other than Ireland/the Common Travel Area); Schengen ADS group tourism visa variants. No fee is stated in this entry: secondary sources disagree (GBP 39 vs GBP 41.50) and no fee was read on an official page.",
+    "passport": "VN",
+    "region": "Europe",
+    "requires": "Direct Airside Transit Visa (DATV) unless holding one of the exempting documents listed in notes",
+    "source": {
+      "name": "Home Office (UK) — UK Visa Requirements poster, August 2026",
+      "url": "https://assets.publishing.service.gov.uk/media/69a836bedcb774b43556050c/UK_Visa_requirements_March_2026.pdf"
+    },
+    "status": "transit_visa",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "None: no held foreign visa or permit removes the US visa requirement for transit",
+    "conditions": [
+      "Immediate and continuous transit on a prearranged itinerary, without any unreasonable layover",
+      "A layover for any other purpose (visiting friends, sightseeing) requires a visitor (B) visa instead",
+      "Common-carrier ticket or other evidence of transport arrangements to the destination",
+      "Sufficient funds for the transit journey",
+      "Permission to enter another country after the US transit, unless advance permission is not required",
+      "Passport valid at least 6 months beyond the period of stay (unless exempt by country-specific agreement)",
+      "Application via Form DS-160 with interview; non-refundable application fee USD 185 as stated on the State Department page"
+    ],
+    "destination": "United States",
+    "destination_iso": "US",
+    "duration": "Immediate and continuous transit; period of stay cannot exceed 29 days",
+    "held_visas": [],
+    "notes": "Vietnam is not a Visa Waiver Program country: the full 42-country VWP list was read on the State Department page (https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visa-waiver-program.html) and Vietnam is absent. A valid visitor (B) visa may be used to transit instead of a C-1; that is a US visa, not a held foreign-visa exemption, so the status is transit_visa_restricted. The 29-day maximum is from 9 FAM 402.4 (https://fam.state.gov/FAM/09FAM/09FAM040204.html), which also records the Transit Without Visa programme as suspended indefinitely (in the crewmember section). There is no sterile airside transit in the US: every arriving passenger clears immigration, so the transit question is the same as the entry question.",
+    "passport": "VN",
+    "region": "Americas",
+    "requires": "C-1 transit visa (a valid US visitor (B) visa may also be used)",
+    "source": {
+      "name": "US Department of State — Transit Visa",
+      "url": "https://travel.state.gov/content/travel/en/us-visas/other-visa-categories/transit.html"
+    },
+    "status": "transit_visa_restricted",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Transit through Canada without a Canadian visa under the TWOV programme",
+    "conditions": [
+      "Participating airline only",
+      "Participating airport only: Toronto Pearson Terminal 1, Vancouver, Calgary, Winnipeg",
+      "Confirmed onward ticket leaving Canada within 24 hours of arrival",
+      "Remain in the international transit area; leave the airport only to board the connecting flight",
+      "Airline must verify eligibility before boarding",
+      "From-US direction: entered the US with a valid visa, no overstay, no removal or deportation order, direct non-stop flight to Canada",
+      "Toronto Pearson Terminal 3, or changing terminals, disqualifies"
+    ],
+    "destination": "Canada",
+    "destination_iso": "CA",
+    "duration": "24 hours",
+    "held_visas": ["US"],
+    "notes": "Without TWOV, the official page states explicitly that travellers with Indonesian passports must apply for a transit visa (which covers transit of 48 hours or less). If a delay or cancellation pushes the layover beyond 24 hours, TWOV no longer applies and the traveller must report to the Canada Border Services Agency. The TWOV programme needs no application but every condition must be met. Second official page read: https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/transit.html",
+    "passport": "ID",
+    "region": "Americas",
+    "requires": "Valid US visa, travelling to or from the US under the Transit Without Visa (TWOV) programme",
+    "source": {
+      "name": "Immigration, Refugees and Citizenship Canada — Transit Without Visa Program: Find out if you're eligible",
+      "url": "https://ircc.canada.ca/english/department/twov/travellers.asp"
+    },
+    "status": "transit_visa",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Transit through Mexican airports without a Mexican visa",
+    "conditions": [
+      "The visa required for transit is the ordinary visitor visa (without permission for paid activities)",
+      "The visa must be held before departure to board any flight to Mexico",
+      "Held visa must be valid and current",
+      "Passport valid for the entire stay",
+      "Admission at the discretion of immigration officers"
+    ],
+    "destination": "Mexico",
+    "destination_iso": "MX",
+    "duration": "Up to 180 days",
+    "held_visas": ["US", "Canada", "Japan", "UK", "Schengen"],
+    "notes": "Official joint communiqué (Gobernación / Foreign Affairs / INM, 21 October 2023): from 22 October 2023, nationals of visa-required countries must hold the corresponding visa even for immediate transit through airports, to board any flight to Mexico; transit through Mexican international airports requires the visitor visa. The facilitation exceptions (Art. 26) are permanent residence or a valid visa from the countries listed. Duration: the visitor visa allows up to 180 days (Consulmex Seattle and INM pages read). CAVEAT on the nationality premise: the INM visa-required and visa-exempt list pages were read but their country lists render as images and did not extract as text, and the gob.mx country-list PDF returned 403 (not retried); Indonesia's visa-required status is corroborated by the Wikipedia ID page (Mexico: visa required) and by the substitute-visa framework itself. The transit rule itself is from the official communiqué cited. An APEC Business Travel Card appears on the INM alternatives list for entry but was not named in the transit communiqué, so it is not asserted for transit.",
+    "passport": "ID",
+    "region": "Americas",
+    "requires": "Valid visa for Canada, the US, Japan, the UK or a Schengen country, or permanent residence in one of those countries or in a Pacific Alliance member (Chile, Colombia, Peru)",
+    "source": {
+      "name": "Government of Mexico (SRE / Gobernación / INM) — Information for foreigners in transit through Mexico (joint communiqué, 21 Oct 2023)",
+      "url": "https://www.gob.mx/sre/prensa/informacion-para-personas-extranjeras-en-transito-por-mexico-349304?state=published"
+    },
+    "status": "transit_visa",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "No exemption available: a US visa is required even to change planes",
+    "conditions": [
+      "Immediate and continuous transit on a prearranged itinerary without unreasonable layover",
+      "Common carrier ticket or other evidence of onward transport",
+      "Sufficient funds for the transit journey",
+      "Permission to enter the onward country",
+      "No sightseeing, visiting friends, work or other non-transit activity"
+    ],
+    "destination": "United States",
+    "destination_iso": "US",
+    "duration": "Up to 29 days",
+    "held_visas": [],
+    "notes": "FAM 402.4: C visas cover immediate and continuous transit; the period of stay cannot exceed 29 days (8 CFR 214.2(c)(3)); the Transit Without Visa programme has been suspended indefinitely. Indonesia is not on the DHS Visa Waiver Program list (42 countries, read in full on 2026-11-15 at https://www.dhs.gov/visa-waiver-program), so no ESTA route exists. Fee (US$185 MRV) was NOT verified on any official page read and is omitted.",
+    "passport": "ID",
+    "region": "Americas",
+    "requires": "C-1 transit visa (no third-country visa or permit exempts)",
+    "source": {
+      "name": "US Department of State — 9 FAM 402.4 Transit Visas (C Visas)",
+      "url": "https://fam.state.gov/FAM/09FAM/09FAM040204.html"
+    },
+    "status": "transit_visa_restricted",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Transit through Canada without a Canadian visa under the TWOV programme",
+    "conditions": [
+      "Philippine passport held, as a citizen of the Philippines",
+      "Valid visa to enter the United States",
+      "No overstay of authorised US stay; not under a US removal or deportation order",
+      "Destined for a third country, including the country of nationality, with the required documents for the destination and any transit countries",
+      "Travelling on an approved airline (list includes Philippine Airlines, Air Canada, Cathay Pacific and others)",
+      "Transiting through a participating airport: Calgary, Toronto Pearson Terminal 1 only, Vancouver, or Winnipeg",
+      "Confirmed ticket for a flight leaving Canada within 24 hours of arrival; flying via Toronto Pearson Terminal 3 or changing terminals there does not qualify",
+      "TWOV travellers who miss a connection have up to 24 hours from arrival before they must see a border services officer"
+    ],
+    "destination": "Canada",
+    "destination_iso": "CA",
+    "duration": "Transit within 24 hours of arrival (TWOV); a transit visa covers up to 48 hours",
+    "held_visas": ["US"],
+    "notes": "Baseline transit-visa rule and the TWOV nationality list were both read on official IRCC pages: the TWOV programme page (cited source) and the transit-visa eligibility page (https://ircc.canada.ca/english/visit/transit-apply-who.asp), which names the Philippines among the nationalities that may transit without a visa when travelling to or from the United States. eTA eligibility is mentioned on the IRCC page as a separate condition and was not researched further here.",
+    "passport": "PH",
+    "region": "Americas",
+    "requires": "A Canadian transit visa for transits of 48 hours or less without a valid visitor visa or eTA eligibility — unless all Transit Without Visa (TWOV) programme conditions are met, including holding a valid US visa",
+    "source": {
+      "name": "Immigration, Refugees and Citizenship Canada — Transit Without Visa Program",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/temporary-residents/visitors/transit-without-visa-program.html"
+    },
+    "status": "transit_visa",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Transit through Mexican airports without a Mexican visa when holding a qualifying visa or permanent residence",
+    "conditions": [
+      "The visa (or qualifying document) must be held before departure in the country of origin, to board any flight to Mexico",
+      "Exempting documents: proof of permanent residence in Canada, USA, Japan, UK, any Schengen country or a Pacific Alliance country; or a valid visa for Canada, USA, Japan, UK or any Schengen country"
+    ],
+    "destination": "Mexico",
+    "destination_iso": "MX",
+    "duration": "Immediate transit",
+    "held_visas": ["US", "Canada", "Japan", "UK", "Schengen"],
+    "notes": "Rule in force from 22 Oct 2023, per the joint SEGOB-SRE-INM communiqué of 21 Oct 2023 (page copy crawled 17 Jun 2026). The older escorted-transit-without-visa practice described in pre-October-2023 material is superseded. The Philippines' visa-required baseline rests on the Wikipedia PH page (the INM country list did not render in the page extraction; the INM substitute-document list itself was read — see the A2 Mexico entry). There is no separate Mexican 'transit visa' category; the visitor visa is the document required.",
+    "passport": "PH",
+    "region": "Americas",
+    "requires": "A Mexican visitor visa (visitante sin permiso para realizar actividades remuneradas), required even for immediate transit through Mexican airports — unless the traveller holds a qualifying visa or permanent residence (see conditions)",
+    "source": {
+      "name": "Secretaría de Relaciones Exteriores (Mexico) — Information for foreign nationals in transit through Mexico",
+      "url": "https://www.gob.mx/sre/prensa/informacion-para-personas-extranjeras-en-transito-por-mexico-349304?state=published"
+    },
+    "status": "transit_visa",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Transit through the United States on a C visa; no third-country visa or permit exempts",
+    "conditions": [
+      "Prearranged itinerary with reasonably expeditious departure and no unreasonable layover privileges",
+      "Layover purposes other than transit (visiting friends, sightseeing) require the visa for that purpose, e.g. a visitor (B) visa",
+      "Passport valid at least 6 months beyond the period of stay unless exempt by country-specific agreement",
+      "Application via Form DS-160 with interview; $185 non-refundable application fee stated on the source page"
+    ],
+    "destination": "United States",
+    "destination_iso": "US",
+    "duration": "Immediate and continuous transit only",
+    "fee": "$185",
+    "held_visas": [],
+    "notes": "Classification reasoning: status is transit_visa_restricted because no held visa/permit of another country exempts a Philippine passport holder from the US transit-visa requirement. The State Department page states a valid visitor (B) visa may be used to transit instead of a C visa, and that citizens of Visa Waiver Program countries may transit on the programme; the Philippines is not a VWP country, so neither route is an exemption available via a third-country document. The empty held_visas array is deliberate.",
+    "passport": "PH",
+    "region": "Americas",
+    "requires": "A transit (C) visa for immediate and continuous transit through the United States en route to another country",
+    "source": {
+      "name": "U.S. Department of State — Transit Visa",
+      "url": "https://travel.state.gov/content/travel/en/us-visas/other-visa-categories/transit.html"
+    },
+    "status": "transit_visa_restricted",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Transit through a participating Canadian airport without a Canadian transit visa, under the Transit Without Visa (TWOV) Program",
+    "conditions": [
+      "Travel with an airline that participates in the TWOV Program; the airline must verify eligibility before boarding",
+      "Travel through a participating airport: Toronto Pearson International Airport (Terminal 1 only), Vancouver International Airport, Calgary International Airport, or Winnipeg International Airport",
+      "Remain in the sterile international transit area; do not leave the airport except to board the flight",
+      "Confirmed airline ticket for a flight leaving Canada within 24 hours of arrival",
+      "If the flight is cancelled or delayed so the layover exceeds 24 hours, or the connection is missed, or US entry is refused, the exemption ends and the traveller must see a Canada Border Services Agency officer for examination",
+      "When travelling FROM the United States: the flight to Canada must be direct and non-stop; the traveller must have entered the US with a valid visa, must not have stayed longer than authorised, and must not be under a removal or deportation order"
+    ],
+    "destination": "Canada",
+    "destination_iso": "CA",
+    "duration": "Up to 24 hours from arrival",
+    "held_visas": ["US"],
+    "notes": "The page states that travellers with Thai passports who do not meet all TWOV requirements may need a transit visa (and in some cases may be able to apply for an eTA). Caveat: the served copy of the page was crawled 2026-08-10 (97 days before the check); the content is consistent with the IRCC program tools page. Flag for a fresher re-check if the coordinator wants one.",
+    "passport": "TH",
+    "region": "Americas",
+    "requires": "A valid US visa (when travelling to the United States via Canada), or a lawful US stay just completed (when connecting through Canada from the United States to an international destination)",
+    "source": {
+      "name": "Immigration, Refugees and Citizenship Canada — Transit Without Visa Program: Find out if you are eligible",
+      "url": "https://www.cic.gc.ca/English/department/twov/travellers.asp"
+    },
+    "status": "transit_visa",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Transit through a Mexican airport without a Mexican visitor visa",
+    "conditions": [
+      "Passport or identity and travel document valid under international law",
+      "The held visa must be valid and current",
+      "Passport valid for the whole stay, and admission at the immigration officer's discretion (per the consulate page)"
+    ],
+    "destination": "Mexico",
+    "destination_iso": "MX",
+    "duration": "For the transit connection only",
+    "held_visas": ["Canada", "US", "Japan", "UK", "Schengen"],
+    "notes": "CAVEAT — READ BEFORE MERGING: the SRE press release of 21 Oct 2023 ('Informacion para personas extranjeras en transito por Mexico', gob.mx) that announced the airport-transit visa requirement could NOT be read (HTTP 403 on 2026-11-15) and was not retried. This entry rests on the official INM page cited as source, which states nationals of the listed countries must obtain a visa 'under any condition of entry' and lists the same visa/residence alternatives, plus the official Consulate of Mexico in Seattle page (https://consulmex.sre.gob.mx/seattle/index.php/en/visas-for-foreigners, read 2026-11-15) for the exemption detail. Secondary sources consistently report the October 2023 transit rule. The coordinator may want a live-browser re-check of the SRE press release. The multiple-entry discrepancy from the A2 Mexico entry carries over: the consulate page says 'any type'; secondary sources say multiple-entry.",
+    "passport": "TH",
+    "region": "Americas",
+    "requires": "A valid visa from Canada, the US, Japan, the UK or a Schengen country; OR permanent residence in one of those countries or in a Pacific Alliance country (Chile, Colombia, Peru); OR a Mexico-approved APEC Business Travel Card (air arrivals, business trips only)",
+    "source": {
+      "name": "Instituto Nacional de Migracion (INM) — Countries and regions that require a visa to travel to Mexico",
+      "url": "https://www.inm.gob.mx/gobmx/word/index.php/paises-requieren-visa-para-mexico/"
+    },
+    "status": "transit_visa",
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "No exemption: no third-country visa or permit removes the US transit visa requirement for Thai holders",
+    "conditions": [
+      "Prearranged itinerary with reasonably expeditious departure and no unreasonable layover",
+      "Passport valid for at least 6 months beyond the period of stay (unless exempt by country-specific agreement)",
+      "Evidence of onward travel arrangements and permission to enter the destination country",
+      "Non-refundable visa application fee of $185 stated on the page"
+    ],
+    "destination": "United States",
+    "destination_iso": "US",
+    "duration": "Immediate and continuous transit only",
+    "held_visas": [],
+    "notes": "Thailand is NOT among the designated Visa Waiver Program countries on the official VWP page (https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visa-waiver-program.html, read 2026-11-15), so ESTA transit is not available to Thai holders. A valid US visitor (B) visa may be used for transit, but that is a US visa, not a third-country substitute, so held_visas is empty and the status is transit_visa_restricted. The 29-day statutory cap for C-1 stays was NOT stated on the page read and is omitted. Layover privileges for other purposes (visiting friends, sightseeing) require the visa for that purpose instead.",
+    "passport": "TH",
+    "region": "Americas",
+    "requires": "A C-1 transit visa, or a valid US visitor (B) visa which may also be used for transit",
+    "source": {
+      "name": "U.S. Department of State — Transit Visa",
+      "url": "https://travel.state.gov/content/travel/en/us-visas/other-visa-categories/transit.html"
+    },
+    "status": "transit_visa_restricted",
+    "verified": "2026-11-15"
+  }
+]

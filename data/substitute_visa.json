@@ -1,0 +1,631 @@
+[
+  {
+    "benefit": "Enter Albania without an Albanian visa",
+    "conditions": [
+      "Schengen visa must be multiple-entry and previously used in a Schengen country, or a valid Schengen residence permit held",
+      "EU, US or UK visa must be multiple-entry and previously used in the issuing country (residence permits, including electronic ones, also qualify)",
+      "Traveller must leave Albania no later than 3 days before the held document expires",
+      "Holders of a UAE 10-year residence permit also qualify; the permit must have at least one year of validity remaining"
+    ],
+    "destination": "Albania",
+    "destination_iso": "AL",
+    "duration": "No fixed stay stated on the official page read; must leave no later than 3 days before the held visa or permit expires",
+    "held_visas": ["Schengen", "EU", "US", "UK", "UAE"],
+    "notes": "DURATION GAP: the official page read states no stay length for this exemption (its 90-in-180 wording describes the Type C visa, not the exemption). Do not invent 90 days; the 90-day figure in secondary sources was not copied. The exemption does not apply to Iranian nationals, which is irrelevant to Vietnamese holders. Source is the Ministry for Europe and Foreign Affairs visa-regime page (Wikipedia ref [7] on the Vietnamese-citizens page).",
+    "passport": "VN",
+    "region": "Europe",
+    "requires": "Valid multiple-entry Schengen visa previously used in a Schengen country, or valid Schengen residence permit; or valid multiple-entry visa or residence permit (including electronic) from an EU member state, the US or the UK, previously used in the issuing country",
+    "source": {
+      "name": "Ministry for Europe and Foreign Affairs of Albania — Visa regime for foreign citizens",
+      "url": "https://punetejashtme.gov.al/en/regjimi-i-vizave-per-te-huajt/"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Single-entry Tourist Visa-on-Arrival instead of applying for a visa in advance",
+    "conditions": [
+      "Tourism or casual visits to friends or relatives only",
+      "No residence or occupation in Antigua and Barbuda",
+      "Passport valid at least 6 months",
+      "Return ticket and sufficient funds required",
+      "Must not be persona non grata, prohibited or undesirable",
+      "Non-extendable and non-convertible except medical cases with Chief Immigration Officer approval",
+      "Not applicable to diplomatic or official passports"
+    ],
+    "destination": "Antigua and Barbuda",
+    "destination_iso": "AG",
+    "duration": "Up to 30 days",
+    "fee": "USD 100 per passenger, including children (or EC equivalent)",
+    "held_visas": ["US", "Canada", "UK", "Schengen"],
+    "notes": "The benefit is visa-on-arrival, NOT visa-free entry; word it honestly on the site. Fee and all conditions were read on the Immigration Department Visa-on-Arrival page.",
+    "passport": "VN",
+    "region": "Americas",
+    "requires": "Valid US visa or permanent resident card, Canadian visa or permanent resident card, UK visa or resident card, or Schengen visa or resident card",
+    "source": {
+      "name": "Immigration Department of Antigua and Barbuda — Visa on Arrival",
+      "url": "https://immigration.gov.ag/visa-services/visa-on-arrival/"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Apply online for an Electronic Travel Authorisation (AVE) instead of a consular visa",
+    "conditions": [
+      "Ordinary passport holders travelling for tourism",
+      "US green card (permanent residence) does NOT qualify",
+      "AVE is processed online via the Dirección Nacional de Migraciones and takes up to 20 business days"
+    ],
+    "destination": "Argentina",
+    "destination_iso": "AR",
+    "duration": "3 consecutive months to enter after grant; stay of 3 consecutive months from entry; multiple entries and exits",
+    "held_visas": ["US"],
+    "notes": "Vietnam is named in the eligible-nationality list on the New York consulate AVE page read. The ESTA / recent-US-entry alternative on that page applies only to nationals of US-visa-exempt jurisdictions and does not apply to Vietnamese holders. A USD 400 fee was reported only by secondary sources and is omitted. Stay/validity detail read on the Consulate General in Toronto tourist-visa page: https://ctoro.cancilleria.gob.ar/en/tourist-visa-0 (read 2026-11-15).",
+    "passport": "VN",
+    "region": "Americas",
+    "requires": "Valid US visa in category B2, J, B1, O, P (P1-P2-P3), E or H-1B",
+    "source": {
+      "name": "Consulate General of Argentina in New York — Electronic Travel Authorization (AVE)",
+      "url": "https://cnyor.cancilleria.gob.ar/en/electronic-travel-authorization-ave-3"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter Costa Rica without a Costa Rican consular visa",
+    "conditions": [
+      "Route I (US/Canada): multiple-entry visa or residence of any category, including refugee/asylum, valid at least 1 calendar day from intended entry; stay granted cannot exceed the document's validity; US C1/C2/C3 transit visas are not accepted",
+      "Route II (UK/Iceland/Norway/Switzerland/EU): residence only, not visas; multiple-entry, or valid at least 90 days from entry; refugee/asylum residence excluded",
+      "Route III (Schengen): category C or D visa, multiple-entry only, validity up to 90 days, valid at least 1 day from entry and already in force (start date not after entry date); stay cannot exceed the visa's validity",
+      "Passport minimum validity 180 days (Tercer Grupo rule)",
+      "Proof of funds of at least USD 100 per month or part-month, and a return or onward ticket"
+    ],
+    "destination": "Costa Rica",
+    "destination_iso": "CR",
+    "duration": "Up to 30 days",
+    "held_visas": ["US", "Canada", "Schengen", "UK", "EU", "Iceland", "Norway", "Switzerland"],
+    "notes": "Vietnam is in TERCER GRUPO (consular visa required) in the DGME directive; the exemption sits in the QUINTO exceptions of the same directive (AJ-484-11-2025, published in La Gaceta via Imprenta Nacional, Spanish, read 2026-11-15). The group rule allows a maximum stay of 30 days extendable to 90; the exception routes cap the stay at the held document's validity. Older wording requiring 6 months' validity on the held document is superseded by this November 2025 directive (see Conflicts). The Wikipedia page's Costa Rica references ([76] a 2022 VisaList blog, [77] an irrelevant 2020 Reuters article) were judged weak and were not used; the directive above is the source.",
+    "passport": "VN",
+    "region": "Americas",
+    "requires": "Multiple-entry visa or residence from the US or Canada; or residence in the UK, Iceland, Norway, Switzerland or an EU country; or a multiple-entry Schengen category C or D visa — each meeting the validity conditions listed",
+    "source": {
+      "name": "DGME Costa Rica — Directrices Generales de Visas de Ingreso y Permanencia para No Residentes (AJ-484-11-2025, La Gaceta)",
+      "url": "https://www.imprentanacional.go.cr/controlpanel/solicitudes/App_HttpHandlers/GetAnexo.ashx?idAnexo=756725"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter Georgia without a Georgian visa",
+    "conditions": [
+      "Held visa and/or residence permit must be valid on the day of entry"
+    ],
+    "destination": "Georgia",
+    "destination_iso": "GE",
+    "duration": "90 calendar days in any 180-day period",
+    "held_visas": ["Australia", "Austria", "USA", "UAE", "New Zealand", "Bahrain", "Belgium", "Bulgaria", "Germany", "Denmark", "UK", "Spain", "Estonia", "Japan", "Ireland", "Iceland", "Israel", "Italy", "Canada", "Qatar", "Cyprus", "South Korea", "Latvia", "Lithuania", "Liechtenstein", "Luxembourg", "Malta", "Netherlands", "Norway", "Oman", "Poland", "Portugal", "Romania", "Greece", "France", "Saudi Arabia", "Slovakia", "Slovenia", "Hungary", "Finland", "Kuwait", "Sweden", "Switzerland", "Czech Republic", "Croatia"],
+    "notes": "Coordinator verified the Ordinance text on 2026-11-15: its 50 numbered items comprise the 45 country names in held_visas plus five territory groupings (Faroe Islands and Greenland; UK overseas territories; UK Crown Dependencies; Aruba and Netherlands Antilles; French Polynesia and New Caledonia), all covered by the Ordinance text read. The English text read is the 2015 original; a reported 2025 amendment imposing a 1-year-validity condition on GCC documents for 17 named nationalities could not be read (amending PDF failed to load) and Vietnam was not among the names reported. A reported GEL 30,000 health-insurance requirement from 1 Jan 2026 was not verified on any official page read and is excluded from conditions. The Wikipedia page for Vietnamese citizens carries no substitute-visa note for Georgia, so it cannot serve as fallback here.",
+    "passport": "VN",
+    "region": "Asia",
+    "requires": "Valid visa and/or residence permit of one of the countries listed in Government Ordinance No. 256 (see held_visas and notes)",
+    "source": {
+      "name": "Legislative Herald of Georgia — Government Ordinance No. 256 of 5 June 2015",
+      "url": "https://matsne.gov.ge/en/document/view/2867377?impose=parallelEn&fullscreen=1"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter Mexico without a Mexican visa for tourism or unpaid activities",
+    "conditions": [
+      "Tourism or unpaid activities only",
+      "Held visa must be valid and unexpired, and affixed in the passport",
+      "Passport must stay valid for the whole stay",
+      "Admission and length of stay are at the immigration officer's discretion"
+    ],
+    "destination": "Mexico",
+    "destination_iso": "MX",
+    "duration": "Up to 180 days",
+    "held_visas": ["US", "Canada", "Japan", "UK", "Schengen"],
+    "notes": "The official page read says a visa of any type qualifies and states no multiple-entry requirement; secondary sources claiming a multiple-entry requirement were not followed (see Conflicts). Citizenship or permanent residence of the same places also qualifies. The same page lists a Mexico-approved APEC Business Travel Card as a further exemption; it is not a visa/permit and is not in held_visas.",
+    "passport": "VN",
+    "region": "Americas",
+    "requires": "Valid, unexpired visa (any type) issued by the United States, Canada, Japan, the United Kingdom or a Schengen country, affixed in the passport; or citizenship or permanent residence of one of those places",
+    "source": {
+      "name": "Consulate of Mexico in Seattle — Visas for Foreigners",
+      "url": "https://consulmex.sre.gob.mx/seattle/index.php/en/visas-for-foreigners"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter, stay in or transit Montenegro without a Montenegrin visa",
+    "conditions": [
+      "Stay may not exceed the validity of the held visa if that is shorter than 30 days"
+    ],
+    "destination": "Montenegro",
+    "destination_iso": "ME",
+    "duration": "Up to 30 days",
+    "held_visas": ["Schengen", "US", "UK", "Ireland"],
+    "notes": "CONFLICT — RE-CHECK RECOMMENDED: the gov.me page read lists four issuers (Schengen, US, UK, Ireland). Multiple secondary sources quoting the Decree on the Visa Regime (Sl. list CG 158/2026, Art. 5, applied from 1 Nov 2026, formerly Art. 7) list eight issuers, adding Australia, Japan, Canada and New Zealand, and say the APEC card dropped out. The decree text itself was not read on an official site, so this entry follows the official page actually read; the gov.me page may be stale or simplified. The separate gov.me visas-and-visa-regime page does not state the substitute rule.",
+    "passport": "VN",
+    "region": "Europe",
+    "requires": "Valid Schengen visa, valid visa from the US, UK or Ireland, or a residence permit from one of those countries",
+    "source": {
+      "name": "Government of Montenegro — Embassies and consulates of Montenegro and visa regimes for foreign citizens",
+      "url": "https://www.gov.me/en/diplomatic-missions/embassies-and-consulates-of-montenegro"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter Albania without an Albanian visa",
+    "conditions": [
+      "Must leave no later than 3 days before the held document expires",
+      "Passport valid at least 3 months beyond departure and issued within the previous 10 years",
+      "Does not apply to Iranian nationals"
+    ],
+    "destination": "Albania",
+    "destination_iso": "AL",
+    "duration": "No fixed stay stated on the official page read; must leave no later than 3 days before the held visa or permit expires",
+    "held_visas": ["Schengen", "US", "UK", "EU", "UAE"],
+    "notes": "Duration: the official page states no stay length for this exemption (its 90-in-180 wording describes the Type C visa, not the exemption); the coordinator replaced the Wikipedia-derived 90-day figure with expiry-bound wording. UAE entry is residence-permit only.",
+    "passport": "ID",
+    "region": "Europe",
+    "requires": "Valid multiple-entry Schengen visa previously used in a Schengen country, or a valid Schengen residence permit; or a valid multiple-entry visa or residence permit (including electronic) from an EU member state, the USA or the UK, previously used in the issuing country; or a 10-year UAE residence permit with at least 1 year of validity",
+    "source": {
+      "name": "Ministry for Europe and Foreign Affairs of Albania — Visa regime for foreigners",
+      "url": "https://punetejashtme.gov.al/en/regjimi-i-vizave-per-te-huajt/"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Visa on arrival (single entry) instead of applying for an Electronic Entry Visa in advance",
+    "conditions": [
+      "Tourism or casual visits to friends and relatives only",
+      "No residence or occupation in Antigua and Barbuda",
+      "Passport valid at least 6 months",
+      "Return ticket and sufficient funds",
+      "Non-extendable and non-convertible except medical cases with Chief Immigration Officer approval",
+      "Not applicable to diplomatic or official passports"
+    ],
+    "destination": "Antigua and Barbuda",
+    "destination_iso": "AG",
+    "duration": "Up to 30 days",
+    "fee": "US$100",
+    "held_visas": ["US", "Canada", "UK", "Schengen"],
+    "notes": "CONFLICT: the Wikipedia ID page claims visa-free 30 days under an agreement signed 27 August 2021, but the destination policy page says that agreement was signed but NOT ratified and Indonesia needs an Electronic Entry Visa. The official visa-on-arrival page governs for held-visa holders. The immigration FAQ page says generally no visa on arrival; the dedicated VoA page conditions govern for holders of the listed documents. A 6-month remaining validity requirement for the held visa is claimed by secondary sources but is NOT stated on the official page read and is not included. Fee is US$100 per passenger including children.",
+    "passport": "ID",
+    "region": "Americas",
+    "requires": "Valid US visa or permanent resident card, Canadian visa or permanent resident card, UK visa or resident card, or Schengen visa or resident card",
+    "source": {
+      "name": "Antigua and Barbuda Immigration Department — Visa on Arrival",
+      "url": "https://immigration.gov.ag/visa-services/visa-on-arrival/"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Apply for an AVE (electronic travel authorisation) instead of a consular visa, for tourism",
+    "conditions": [
+      "Tourism only",
+      "US visa must remain valid at least 110 days (Embassy in Thailand page; other official pages differ — see notes)",
+      "Processing takes 20 business days",
+      "AVE valid 3 months from issue",
+      "Stay extendable once after assessment (DNM)"
+    ],
+    "destination": "Argentina",
+    "destination_iso": "AR",
+    "duration": "90 days",
+    "fee": "USD 400",
+    "held_visas": ["US"],
+    "notes": "Mechanism verified on official embassy pages (Thailand and Toronto) and the DNM AVE page (Spanish). FEE CONFLICT: Wikipedia says USD 50 (2019-era, outdated); the current Thailand embassy page says USD 400 non-refundable by card — USD 400 used. VALIDITY CONFLICT: Thailand page says the US visa must last at least 110 days; other pages say valid throughout the decision and stay, or 120 days (Sweden page) — 110 days used, conflict recorded. INDONESIA ELIGIBILITY CAVEAT: Indonesia's presence on the AVE-eligible list was NOT read in the linked eligible-countries list itself; it rests on Wikipedia ID-page refs 18 (Kemlu Buenos Aires: Indonesia added to AVE recipients) and 19 — stated explicitly. Other official pages read: https://ctoro.cancilleria.gob.ar/en/tourist-visa-0 and http://www.migraciones.gov.ar/ave/index.htm",
+    "passport": "ID",
+    "region": "Americas",
+    "requires": "Valid US visa in category B2, J, B1, O, P (P1-P3), E or H-1B",
+    "source": {
+      "name": "Embassy of Argentina in Thailand — Entry requirements",
+      "url": "https://etail.cancilleria.gob.ar/en/entry-requirements-argentina-2"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Visa on arrival instead of applying in advance",
+    "conditions": [],
+    "destination": "Bahrain",
+    "destination_iso": "BH",
+    "duration": "14 days",
+    "held_visas": ["Schengen", "UAE", "UK", "US", "Saudi Arabia"],
+    "notes": "Wikipedia fallback, UNCERTAIN: no official page was read confirming the Indonesia-specific conditional visa on arrival; evisa.gov.bh is an interactive eligibility tool and 2026 expansion reports are unverified. Benefit is visa on arrival (a visa is still issued at the border), not a waiver. Flag for coordinator display decision and re-verification.",
+    "passport": "ID",
+    "region": "Asia",
+    "requires": "Valid visa from a Schengen country, the UAE, the UK, the US or Saudi Arabia (except Hajj/Umrah visas)",
+    "source": {
+      "name": "Wikipedia — Visa requirements for Indonesian citizens",
+      "url": "https://en.wikipedia.org/wiki/Visa_requirements_for_Indonesian_citizens"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter Costa Rica without a Costa Rican visa",
+    "conditions": [
+      "Visa must be multiple-entry"
+    ],
+    "destination": "Costa Rica",
+    "destination_iso": "CR",
+    "duration": "30 days",
+    "held_visas": ["US", "Canada"],
+    "notes": "Wikipedia fallback, CONSERVATIVE: the official migracion.go.cr visas page read on 2026-11-15 contained only provisional-visa text and no substitute rule. Summaries of new directive AJ-484-11-2025 conflict on whether Schengen C/D visas and EU/UK residence permits are included, and on the validity remainder (6 months vs 90 days vs 1 day). Only US and Canada are asserted and no validity figure is asserted. Flag for re-verification against the directive itself.",
+    "passport": "ID",
+    "region": "Americas",
+    "requires": "Valid multiple-entry visa from the US or Canada",
+    "source": {
+      "name": "Wikipedia — Visa requirements for Indonesian citizens",
+      "url": "https://en.wikipedia.org/wiki/Visa_requirements_for_Indonesian_citizens"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter Georgia without a Georgian visa",
+    "conditions": [
+      "Present the visa or permit and supporting documents at the border"
+    ],
+    "destination": "Georgia",
+    "destination_iso": "GE",
+    "duration": "90 days in any 180 days",
+    "held_visas": ["US", "UK", "Japan", "Canada", "Australia", "New Zealand", "Israel", "South Korea", "Schengen", "GCC"],
+    "notes": "Wikipedia fallback: the official GeoConsul lookup page returned only a tool shell with no rule text, and the Resolution No. 256 PDF is Georgian-only, so the list and duration could not be independently verified from official pages. CONFLICT on held-visa validity: a Wikipedia secondary section (2017 source) says 6 months' remaining validity; summaries of the Resolution say the document need only be valid on the day of entry — no validity condition is asserted. Travel medical insurance from 1 January 2026 is reported in secondary sources but NOT verified and is not included as a condition; flag as unchecked.",
+    "passport": "ID",
+    "region": "Asia",
+    "requires": "Valid visa or residence permit from the USA, UK, Japan, Canada, Australia, New Zealand, Israel, South Korea, a Schengen country or a GCC country",
+    "source": {
+      "name": "Wikipedia — Visa requirements for Indonesian citizens",
+      "url": "https://en.wikipedia.org/wiki/Visa_requirements_for_Indonesian_citizens"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter Mexico without a Mexican visa for tourism or unpaid activities",
+    "conditions": [
+      "Passport must be valid for the entire stay",
+      "Admission and length of stay are at the discretion of immigration officers",
+      "An expired US visa is not covered by holding an EAD, I-797A, I-20, DS-2019 or Advance Parole"
+    ],
+    "destination": "Mexico",
+    "destination_iso": "MX",
+    "duration": "Up to 180 days",
+    "held_visas": ["US", "Canada", "Japan", "UK", "Schengen"],
+    "passport": "ID",
+    "region": "Americas",
+    "requires": "Valid visa (any type) issued by the US, Canada, Japan, the UK or a Schengen country, properly affixed in the passport; or citizenship or permanent residence of one of those countries; or a valid APEC Business Travel Card approved by Mexico",
+    "source": {
+      "name": "Consulate of Mexico in Seattle — Visas for Foreigners",
+      "url": "https://consulmex.sre.gob.mx/seattle/index.php/en/visas-for-foreigners"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter, stay in and transit Montenegro without a Montenegrin visa",
+    "conditions": [
+      "Stay no longer than the held visa's expiry if that is shorter"
+    ],
+    "destination": "Montenegro",
+    "destination_iso": "ME",
+    "duration": "Up to 30 days",
+    "held_visas": ["Schengen", "US", "UK", "Ireland"],
+    "notes": "Conservative list from the government page read (a general paragraph on an Albania-specific embassy page). A new Decree 158/2026 applying from 1 November 2026 reportedly expands the issuing countries to Australia, Japan, Canada and New Zealand, but the decree itself was NOT read, so the gov.me list is used; flag for coordinator re-check.",
+    "passport": "ID",
+    "region": "Europe",
+    "requires": "Valid Schengen, US, UK or Ireland visa, or a residence permit from one of those countries",
+    "source": {
+      "name": "Government of Montenegro — Embassies and Consulates (Albania page)",
+      "url": "https://www.gov.me/en/diplomatic-missions/embassies-and-consulates-of-montenegro/albania"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter Panama without a Panamanian visa",
+    "conditions": [
+      "Passport valid at least 3 months",
+      "Proof of solvency of at least USD 500",
+      "Round-trip ticket",
+      "US permanent residence card accepted"
+    ],
+    "destination": "Panama",
+    "destination_iso": "PA",
+    "duration": "Up to 30 days",
+    "held_visas": ["US", "Canada", "Australia", "Japan", "South Korea", "Singapore", "EU"],
+    "notes": "Executive Decree 521 Art. 1 sets the issuer list. Executive Decree 196 of 28 October 2024 replaced Art. 2: now only a valid visa on entry is required — the old multiple-entry, previously-used and 6-months-validity conditions are gone. The Wikipedia ID page still states multiple-entry plus 1-year validity and is outdated. Indonesia appears on the embassy's Authorized Visas list (diplomatic passports exempt only).",
+    "passport": "ID",
+    "region": "Americas",
+    "requires": "Valid visa or residence permit from Canada, the USA, Australia, South Korea, Japan, the UK, Singapore or any EU member state",
+    "source": {
+      "name": "Embassy of Panama — Visas",
+      "url": "https://www.embassyofpanama.org/visas-1/"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Visa-free entry to Albania without an Albanian visa",
+    "conditions": [
+      "Held visa must be multiple-entry",
+      "Held visa must previously have been used in a Schengen country (Schengen route) or in the issuing country (EU/USA/UK route)",
+      "Traveller must leave Albania no later than 3 days before the held visa/permit expires",
+      "Passport valid at least 3 months beyond departure and issued within the previous 10 years (stated on the same page for visa-free nationals)"
+    ],
+    "destination": "Albania",
+    "destination_iso": "AL",
+    "duration": "No fixed stay stated for the exemption; must depart no later than 3 days before the held visa/permit expires",
+    "held_visas": ["Schengen", "EU", "US", "UK"],
+    "notes": "The official page states no stay length for the exemption itself. A figure of up to 90 days in any 180-day period appears on the same page for Type C visas, but it is not stated as the exemption stay, so it is deliberately not presented as the duration. The page also records an exclusion for Iranian nationals, which is irrelevant to Philippine passport holders.",
+    "passport": "PH",
+    "region": "Europe",
+    "requires": "A valid multiple-entry Schengen visa previously used in a Schengen country, or a valid Schengen residence permit; or a valid multiple-entry visa or valid residence permit (including electronic format) from an EU member state, the USA or the UK, previously used in the issuing country",
+    "source": {
+      "name": "Ministry for Europe and Foreign Affairs of Albania — Visa regime for foreigners",
+      "url": "https://punetejashtme.gov.al/en/regjimi-i-vizave-per-te-huajt/"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Visa on arrival (single entry) — not visa-free entry",
+    "conditions": [
+      "Purpose must be tourism or casual visits to friends/relatives only; no residence or occupation in Antigua and Barbuda",
+      "Passport valid at least 6 months, plus a re-entry permit if one is required",
+      "Return ticket and sufficient funds",
+      "Traveller must not be persona non grata, prohibited or undesirable",
+      "Visa on arrival is non-extendable and non-convertible except for medical cases approved by the Chief Immigration Officer"
+    ],
+    "destination": "Antigua and Barbuda",
+    "destination_iso": "AG",
+    "duration": "30 days",
+    "fee": "US$100",
+    "held_visas": ["US", "Canada", "UK", "Schengen"],
+    "notes": "Fee is US$100 per passenger including children (or the EC$ equivalent). The visa-on-arrival route does not apply to diplomatic or official passport holders; that exclusion is outside this project's ordinary-passport scope.",
+    "passport": "PH",
+    "region": "Americas",
+    "requires": "A valid US visa or permanent resident card, Canadian visa or permanent resident card, UK visa or resident card, or Schengen visa or resident card",
+    "source": {
+      "name": "Immigration Department of Antigua and Barbuda — Visa on Arrival",
+      "url": "https://immigration.gov.ag/visa-services/visa-on-arrival/"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Electronic Travel Authorization (AVE) replacing the consular tourist visa; application online before travel, fee payable, decision wait applies — not visa-free on arrival",
+    "conditions": [
+      "Tourism only, ordinary passport",
+      "Apply online via the National Directorate of Migrations (DNM); embassies and consulates have no competence over AVE applications",
+      "US visa must remain valid well beyond the application: one consulate page requires it to cover the decision period plus the following 3 months, another requires at least 110 days of validity",
+      "Processing time 20 business days",
+      "AVE valid 3 consecutive months from issuance; stay of 3 consecutive months from entry; multiple entries and exits; extendable once for a similar period after DNM evaluation",
+      "Passport valid at least 6 months with 2 blank pages; medical insurance and return ticket required (general entry requirements on the Thailand embassy page)"
+    ],
+    "destination": "Argentina",
+    "destination_iso": "AR",
+    "duration": "90 days",
+    "fee": "USD 400",
+    "held_visas": ["US"],
+    "notes": "PH inclusion on the AVE country list is cited to Wikipedia (refs [17][18] on the page), because no openable official page showed the list: the New York consulate AVE page, whose search snippet lists FILIPINAS, could not be fetched and must not be retried, and the DNM AVE site could not be fetched either. The mechanics, fee and visa categories rest on three official consulate pages actually read: Montreal (https://cmrea.cancilleria.gob.ar/en/node/64646), Thailand (https://etail.cancilleria.gob.ar/en/entry-requirements-argentina-2) and Vancouver (https://cgvan.cancilleria.gob.ar/en/request-ave). CONFLICTS RESOLVED IN FAVOUR OF THE OFFICIAL PAGES: Wikipedia states a US$50 fee and B2/B1-B2 visas only; the official pages state USD 400 and the wider category list above. The USD 400 fee and wider list are used here. PH inclusion is additionally corroborated by 2019 reporting of Resolution 33/2019 (Philippine Embassy in Buenos Aires announcement), seen in search results but not relied on as the citation.",
+    "passport": "PH",
+    "region": "Americas",
+    "requires": "A valid US visa in category B2, J, B1, O, P (P1-P2-P3), E or H-1B. A US green card does not qualify",
+    "source": {
+      "name": "Wikipedia — Visa requirements for Philippine citizens",
+      "url": "https://en.wikipedia.org/wiki/Visa_requirements_for_Philippine_citizens"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Visa-free entry to Georgia without a Georgian visa",
+    "conditions": [
+      "Held visa/permit must be valid on the day of entry"
+    ],
+    "destination": "Georgia",
+    "destination_iso": "GE",
+    "duration": "90 days in any 180-day period",
+    "held_visas": ["Schengen/EU states", "UK", "US", "Canada", "Australia", "New Zealand", "Japan", "South Korea", "Ireland", "Israel", "GCC states (Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, UAE)"],
+    "notes": "Full listed-country set per the cited source: Australia, Austria, Bahrain, Belgium, Bulgaria, Canada, Croatia, Cyprus, Czech Republic, Denmark (incl. Faroe Islands/Greenland), Estonia, France (incl. French Polynesia/New Caledonia), Finland, Germany, Greece, Hungary, Iceland, Ireland, Israel, Italy, Japan, Kuwait, Latvia, Lithuania, Liechtenstein, Luxembourg, Malta, Netherlands (incl. Aruba/Netherlands Antilles), New Zealand, Norway, Oman, Poland, Portugal, Qatar, Romania, Saudi Arabia, Slovakia, Slovenia, South Korea, Spain, Sweden, Switzerland, UAE, UK (incl. overseas territories/Crown Dependencies), USA. Wikipedia is cited because the official text (Government Resolution No. 256 of 5 June 2015, as amended by Resolution No. 122 of 17 Apr 2025, PDF at https://gc-pfiles.mfa.gov.ge/DocFiles//2025/5/13/LegalAct/37/de83b55e-be80-48ba-b05c-081d4848616d.pdf) is Georgian-only and could not be read in substance; the official checker page (https://www.geoconsul.gov.ge/en/entering-georgia-visa) rendered only a script-driven country selector with no readable rule content. The resolution's Annex 1 lists 17 nationalities subject to a 1-year-validity rule for GCC multiple-entry visas/permits from 16 May 2025; the Philippines is not among them, so that rule does not apply to PH holders.",
+    "passport": "PH",
+    "region": "Asia",
+    "requires": "A visa and/or residence permit of one of the listed countries (see notes), valid on the day of entry",
+    "source": {
+      "name": "Wikipedia — Visa requirements for Philippine citizens",
+      "url": "https://en.wikipedia.org/wiki/Visa_requirements_for_Philippine_citizens"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Entry as a visitor without a Mexican visa",
+    "conditions": [
+      "Visitor purposes only, with no permission to carry out paid work in Mexico"
+    ],
+    "destination": "Mexico",
+    "destination_iso": "MX",
+    "duration": "Up to 180 days",
+    "held_visas": ["US", "Canada", "Japan", "UK", "Schengen"],
+    "notes": "Official INM page read 15 Nov 2026; it states the substitute documents and the 180-day maximum stay. The INM page does NOT state a multiple-entry requirement for the held visa, although the Wikipedia note for PH does; the multiple-entry qualifier is therefore not carried into this entry (see Conflicts). The country list itself did not render in the page extraction, so the Philippines' visa-required baseline rests on the Wikipedia PH page and on the substitute rule's framing for visa-required nationals. APEC business travel cards and air/sea crew documents are further alternatives on the INM page but are outside this entry's scope.",
+    "passport": "PH",
+    "region": "Americas",
+    "requires": "A valid visa for Canada, the USA, Japan, the UK or any Schengen country; or proof of permanent residence in Canada, the USA, Japan, the UK, any Schengen country, or a Pacific Alliance country (Chile, Colombia, Peru)",
+    "source": {
+      "name": "Instituto Nacional de Migración (INM) — Countries and regions that require a visa to travel to Mexico",
+      "url": "https://www.inm.gob.mx/gobmx/word/index.php/paises-requieren-visa-para-mexico/"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Entry, transit and stay without a Montenegrin visa",
+    "conditions": [
+      "Stay no longer than the held visa's expiry, if that is shorter than 30 days"
+    ],
+    "destination": "Montenegro",
+    "destination_iso": "ME",
+    "duration": "30 days",
+    "held_visas": ["Schengen", "US", "UK", "Ireland"],
+    "notes": "CONFLICT FLAGGED, UNRESOLVED: the Wikipedia PH note (2021 regulation text) and secondary summaries of the Decree on the Visa Regime No. 158/2026 (Art. 5, adopted 26 Oct 2026, applied from 1 Nov 2026) describe a wider set adding Australia, Japan, Canada and New Zealand. The decree text itself was not read. This entry uses the conservative set from the official gov.me pages actually read, and the wider set must not be added without reading the decree. Bulgaria, Croatia and Romania are now Schengen states, so they are covered under 'Schengen' in any case. The Philippines' visa-required baseline was confirmed on the gov.me Philippines country page (https://www.gov.me/en/diplomatic-missions/embassies-and-consulates-of-montenegro/philippines).",
+    "passport": "PH",
+    "region": "Europe",
+    "requires": "A valid Schengen visa, a valid visa from the USA, UK or Republic of Ireland, or a residence permit from those countries",
+    "source": {
+      "name": "Government of Montenegro — Embassies and consulates / visa information",
+      "url": "https://www.gov.me/en/diplomatic-missions/embassies-and-consulates-of-montenegro"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Entry without a Panamanian stamped visa",
+    "conditions": [
+      "Held visa or residence must be valid at entry"
+    ],
+    "destination": "Panama",
+    "destination_iso": "PA",
+    "duration": "30 days",
+    "held_visas": ["Canada", "US", "Australia", "South Korea", "Japan", "UK", "Singapore", "EU"],
+    "notes": "Based on Executive Decree No. 196 of 28 Oct 2024, which modified Art. 2 of Decree No. 521 (6 Aug 2018). The consulate page states the previous requirements (multiple-entry, previously used in the granting state, minimum 6 months validity) are NO LONGER IN FORCE, and they are therefore not carried into this entry. An older embassy FAQ still stating those conditions plus solvency/passport/ticket conditions was treated as superseded (see Conflicts). The Philippines is explicitly listed on the same page among countries requiring a stamped visa, confirming the visa-required baseline.",
+    "passport": "PH",
+    "region": "Americas",
+    "requires": "A valid visa or residence duly issued by Canada, USA, Australia, South Korea, Japan, UK, Singapore, or any EU member state",
+    "source": {
+      "name": "Consulate General of Panama in Hong Kong — Visas",
+      "url": "https://panamaconsulatehk.com/visas/"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Eligibility for a 30-day single-entry e-Visa via evisa.gov.tr — an application is still required; this is not visa-free entry",
+    "conditions": [
+      "e-Visa valid only for tourism or commerce",
+      "Passport must remain valid at least 60 days beyond the duration of stay (i.e. 90 days for a 30-day stay); the page advises holding 6 months validity"
+    ],
+    "destination": "Türkiye",
+    "destination_iso": "TR",
+    "duration": "30 days",
+    "held_visas": ["Schengen", "US", "UK", "Ireland"],
+    "notes": "Ordinary Philippine passport holders are required to have a visa; the held-visa route only unlocks the e-Visa. A separate exemption for diplomatic/official-service passport holders (30 days) appears on the same page and is outside this project's ordinary-passport scope. Türkiye is transcontinental; the site files it under Asia (see CONTRIBUTING.md for the region vocabulary).",
+    "passport": "PH",
+    "region": "Asia",
+    "requires": "A valid visa or residence permit from Schengen member states, USA, UK or Ireland",
+    "source": {
+      "name": "Republic of Türkiye Ministry of Foreign Affairs — Visa Information for Foreigners",
+      "url": "https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa?ios_app=true"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Visa-free entry to Albania without an Albanian visa",
+    "conditions": [
+      "The traveller must leave Albania no later than 3 days before the held document expires",
+      "Passport valid at least 3 months beyond the intended departure and issued within the previous 10 years (stated for nationals who do not require a visa)"
+    ],
+    "destination": "Albania",
+    "destination_iso": "AL",
+    "duration": "No fixed stay stated on the official page read; must leave no later than 3 days before the held visa or permit expires",
+    "held_visas": ["Schengen", "EU", "US", "UK"],
+    "notes": "The exemption paragraph states no explicit stay length; the 90-day figure describes the Type C visa stay (up to 90 days in 180), so no fixed stay is asserted here and the duration states the departure rule instead. Schengen and EU are both preserved as written on the page (they overlap). The exemption does not apply to Iranian nationals (stated on the page; immaterial for TH holders). Legal basis on the page: Law No. 79/2021 and Council of Ministers Decision No. 858 dated 29.12.2021.",
+    "passport": "TH",
+    "region": "Europe",
+    "requires": "A valid multiple-entry Schengen visa previously used in a Schengen country, or a valid Schengen residence permit; OR a valid multiple-entry visa or residence permit (including electronic format) from an EU member state, the US, or the UK, where the visa must previously have been used in the issuing country",
+    "source": {
+      "name": "Ministry for Europe and Foreign Affairs of Albania — Visa regime for foreigners",
+      "url": "https://punetejashtme.gov.al/en/regjimi-i-vizave-per-te-huajt/"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Tourist visa granted on arrival instead of applying for an advance e-Visa",
+    "conditions": [
+      "Sole purpose must be tourism or casual visits to friends or relatives; no residence or occupation in Antigua and Barbuda",
+      "Passport with minimum 6 months' validity, plus a re-entry permit if required by nationality law",
+      "Assured financial standing with a return ticket and sufficient funds",
+      "Must not be persona non grata, prohibited or undesirable",
+      "Single-entry, stay up to 30 days, non-extendable and non-convertible (except medical cases with Chief Immigration Officer approval)",
+      "Fee US$100 per passenger, including children",
+      "Not applicable to diplomatic or official passports"
+    ],
+    "destination": "Antigua and Barbuda",
+    "destination_iso": "AG",
+    "duration": "Up to 30 days",
+    "held_visas": ["US", "Canada", "UK", "Schengen"],
+    "notes": "Do NOT describe this as visa-free: the official page says a visa is granted on arrival for a fee, although some secondary sources loosely call it a waiver or visa-free. Benefit wording must say 'visa on arrival instead of an advance e-Visa'.",
+    "passport": "TH",
+    "region": "Americas",
+    "requires": "A valid US visa or permanent resident card, a Canadian visa or permanent resident card, a UK visa or resident card, or a Schengen visa or resident card",
+    "source": {
+      "name": "Department of Immigration, Antigua and Barbuda — Visa on Arrival",
+      "url": "https://immigration.gov.ag/visa-services/visa-on-arrival/"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Dispense with the Costa Rican consular visa",
+    "conditions": [
+      "Stay granted will not exceed the held document's validity",
+      "US C1/C2/C3 transit visas are not accepted",
+      "Schengen visas whose activation date is after the intended entry date are never accepted",
+      "Thailand is in the third group on the page (consular visa required; maximum stay set by the officer, no more than 30 days)"
+    ],
+    "destination": "Costa Rica",
+    "destination_iso": "CR",
+    "duration": "Up to 30 days",
+    "held_visas": ["US", "Canada", "UK", "Schengen", "EU", "Iceland", "Norway", "Switzerland"],
+    "notes": "Source is the DGME General Directives AJ-484-11-2025 as published in La Gaceta (Alcance 148, Gaceta No. 216, 17 Nov 2025) via Imprenta Nacional. Keep the visa-vs-residence distinction in 'requires': route (I) is visas/residences from the US or Canada; route (II) is RESIDENCE ONLY in the UK nations, Iceland, Norway, Switzerland or EU countries; route (III) is Schengen visas only. Do not flatten these into a single held-visa list. The separate page https://migracion.go.cr/visas/ was read and contains only provisional-visa material; it is not usable as the source.",
+    "passport": "TH",
+    "region": "Americas",
+    "requires": "(I) A multiple-entry US or Canada visa or residence (any category including refugee/asylum, D and C1/D only) with at least 1 calendar day's validity from the intended entry; OR (II) a residence (any category except refugee/asylum) allowing multiple entries or valid at least 90 days in Scotland, Wales, England, Northern Ireland, Iceland, Norway, Switzerland or EU countries; OR (III) a multiple-entry-only Schengen category C or D visa valid up to 90 days, with at least 1 day's validity from the intended entry",
+    "source": {
+      "name": "DGME General Directives AJ-484-11-2025, La Gaceta (Imprenta Nacional)",
+      "url": "https://www.imprentanacional.go.cr/controlpanel/solicitudes/App_HttpHandlers/GetAnexo.ashx?idAnexo=756725"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter Mexico for tourism or unpaid activities without a Mexican visa",
+    "conditions": [
+      "Passport must be valid for the entire stay",
+      "Admission and length of stay are at the immigration officer's discretion",
+      "If the US visa has expired, an EAD, I-797A, I-20, DS-2019 or Advance Parole document does not exempt the traveller"
+    ],
+    "destination": "Mexico",
+    "destination_iso": "MX",
+    "duration": "Up to 180 days",
+    "held_visas": ["US", "Canada", "Japan", "UK", "Schengen"],
+    "notes": "The consulate page describes the held visa as any type, with no multiple-entry wording; other secondary sources and the Visa policy of Mexico summary describe it as multiple-entry. This entry follows the page actually read and flags the discrepancy (see Conflicts). The APEC Business Travel Card route is recorded in 'requires', not as a held visa. The EU residence permit is not recognised as an exemption on the Wikipedia note; the consulate page lists citizenship/permanent residence of the named countries instead.",
+    "passport": "TH",
+    "region": "Americas",
+    "requires": "A valid APEC Business Travel Card approved by Mexico, OR citizenship or permanent residence of the US, Canada, Japan, the UK or a Schengen country, OR a valid unexpired visa (any type) from the US, Canada, Japan, the UK or a Schengen country, properly affixed in the passport",
+    "source": {
+      "name": "Consulate of Mexico in Seattle — Visas for Foreigners",
+      "url": "https://consulmex.sre.gob.mx/seattle/index.php/en/visas-for-foreigners"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Travel to Moldova without a Moldovan visa",
+    "conditions": [],
+    "destination": "Moldova",
+    "destination_iso": "MD",
+    "duration": "During the validity of the held visa/permit",
+    "held_visas": ["EU", "Schengen", "UK", "US", "Canada"],
+    "notes": "Thailand is on the visa-required list on the page, marked [2]; footnote [2] is the exception used here. The page states no explicit maximum stay for this exception ('during their validity'); a 90-in-180 cap is claimed by secondary sources but was not stated on the page read, so the safer duration wording is used. The older Iasi consulate page (http://iasi.mfa.gov.md/en/node/146, read 2026-11-15) gives the same footnote with EU/Schengen only and is treated as stale; the current central MFA page prevails.",
+    "passport": "TH",
+    "region": "Europe",
+    "requires": "A residence permit or a valid visa (excluding transit visas) issued by an EU member state, a Schengen Agreement state, the UK, the USA, or Canada",
+    "source": {
+      "name": "Ministry of Foreign Affairs of the Republic of Moldova",
+      "url": "https://mfa.gov.md/en/node/1289"
+    },
+    "verified": "2026-11-15"
+  },
+  {
+    "benefit": "Enter, stay in and transit through Montenegro without a Montenegrin visa",
+    "conditions": [
+      "Stay no longer than the held visa's expiry if that is shorter than 30 days"
+    ],
+    "destination": "Montenegro",
+    "destination_iso": "ME",
+    "duration": "Up to 30 days",
+    "held_visas": ["Schengen", "US", "UK", "Ireland"],
+    "notes": "CONFLICT FLAGGED FOR COORDINATOR RE-CHECK: multiple secondary sources agree a new Regulation on the Visa Regime (Official Gazette No. 158/2026, applied from 1 Nov 2026, Article 5) also covers Australia, Japan, Canada and New Zealand visas/residence permits (30 days, same expiry cap), and that the APEC card dropped out. This researcher did NOT read the regulation text, so the wider list is NOT included; this entry follows the gov.me page actually read. Thailand appears in the country list on that page with an asterisk.",
+    "passport": "TH",
+    "region": "Europe",
+    "requires": "A travel document with a valid Schengen visa, a valid US, UK or Ireland visa, or a residence permit from one of those countries",
+    "source": {
+      "name": "Government of Montenegro — Embassies and consulates of Montenegro and visa regimes for foreign citizens",
+      "url": "https://www.gov.me/en/diplomatic-missions/embassies-and-consulates-of-montenegro"
+    },
+    "verified": "2026-11-15"
+  }
+]

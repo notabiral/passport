@@ -102,6 +102,26 @@
   },
   {
     "conditions": [
+      "Tourism only",
+      "Ordinary passports only",
+      "Entry and departure must be through Yangon, Mandalay or Nay Pyi Taw international airport",
+      "Passport valid at least 6 months"
+    ],
+    "destination": "Myanmar",
+    "destination_iso": "MM",
+    "duration": "30 days",
+    "notes": "Wikipedia-sourced. The Wikipedia reference for this row points only to the IATA Travel Information Manual, so there was no official page to follow. The airport entry/departure condition was read on the separate Visa policy of Myanmar page. Official Myanmar pages (MFA exemption list PDF, eVisa notice page) could not be loaded. No fee and no extension information was stated, so both fields are omitted. See Conflicts for two rejected secondary claims (land/sea entry; 14 days).",
+    "passport": "VN",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Wikipedia — Visa requirements for Vietnamese citizens",
+      "url": "https://en.wikipedia.org/wiki/Visa_requirements_for_Vietnamese_citizens"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
       "Passport valid at least 6 months beyond the contemplated period of stay",
       "Return ticket to country of origin or onward ticket to next destination",
       "Not subject to a blacklist or deportation order of the DFA or Bureau of Immigration"
@@ -195,6 +215,21 @@
     "verified": "2026-11-15"
   },
   {
+    "conditions": [],
+    "destination": "Cambodia",
+    "destination_iso": "KH",
+    "duration": "30 days",
+    "notes": "Official embassy FAQ table 'Agreement on Visa Exemption', updated 08-07-2019: Indonesia regular passport 30 days (diplomatic and official 14 days). Official page cited instead of Wikipedia. No conditions stated for this row on the page read.",
+    "passport": "ID",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Royal Embassy of Cambodia in London — FAQ",
+      "url": "https://www.cambodiaembassyuk.org/faq/"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
     "conditions": [
       "Must hold an ICAO-compliant ePassport AND have registered it with a diplomatic mission of Japan in Indonesia before travel",
       "Registration validity: 3 years or until the passport expires, whichever comes first"
@@ -240,6 +275,21 @@
     "source": {
       "name": "Ministry of Foreign Affairs Malaysia, Consulate General Davao City",
       "url": "https://www.kln.gov.my/web/phl_davao-city/requirement_foreigner"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Myanmar",
+    "destination_iso": "MM",
+    "duration": "14 days",
+    "notes": "Official exemption list dated June 2016 gives 14 days for Indonesian ordinary passports (diplomatic and official passports also 14 days). Caveat: the list is old. The current Myanmar eVisa notice page could not be read (fetch failed; not retried). Port-of-entry or airport-only conditions reported in search snippets were not verified on any page read and are NOT included; flag as unchecked. Wikipedia concurs at 14 days (IATA ref).",
+    "passport": "ID",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Embassy of Myanmar, Washington DC — Visa exemption list (PDF)",
+      "url": "https://mmrwdc.org/wp-content/uploads/2017/05/visa_exemption_en.pdf.pdf"
     },
     "status": "visa_free",
     "verified": "2026-11-15"
@@ -318,6 +368,23 @@
     "verified": "2026-11-15"
   },
   {
+    "conditions": [
+      "Tourism or family visits only; longer stays or other purposes require a visa"
+    ],
+    "destination": "Vietnam",
+    "destination_iso": "VN",
+    "duration": "14 days",
+    "notes": "CONFLICT RESOLVED FOR 14 DAYS. A September 2025 Vietnamese exemption list (hef.gov.vn PDF, read 2026-11-15) still shows 30 days for Indonesian ordinary passports, but that figure is superseded. An Indonesian Embassy Hanoi notice (official Instagram post, posted 2026-07-05) states the visa-free allowance shrinks from 30 to 14 days effective 15 July 2026, for a tourism/family-visit window, with a visa needed for longer stays or other purposes. Wikipedia (November 2026 crawl) also says 14 days, and multiple July-November 2026 secondary reports agree. One July 2026 source flagged a dispute because the Vietnamese list still showed 30 days. 14 days is used because the embassy notice postdates the list and Wikipedia agrees. Source is cited as Wikipedia per the task instruction: the readable official Vietnamese page says the stale 30 days and the embassy notice is on social media, which is not citable as an official page under DATA_POLICY.",
+    "passport": "ID",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Wikipedia — Visa requirements for Indonesian citizens",
+      "url": "https://en.wikipedia.org/wiki/Visa_requirements_for_Indonesian_citizens"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
     "conditions": [],
     "destination": "Brunei",
     "destination_iso": "BN",
@@ -328,6 +395,21 @@
     "source": {
       "name": "Ministry of Foreign Affairs, Brunei Darussalam — Embassy in Manila",
       "url": "https://www.mfa.gov.bn/philippines_manila/SitePages/Travelling%20to%20Brunei%20Darussalam.aspx"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Cambodia",
+    "destination_iso": "KH",
+    "duration": "30 days",
+    "notes": "Official embassy page cited instead of Wikipedia, per the A1 instruction: the exemption table on the page, headed as updated 08-07-2019, lists the Philippines with a regular passport at 30 days. No exemption conditions are stated on that page, so none are recorded here; do not add e-Arrival or passport-validity conditions without a further verified source.",
+    "passport": "PH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Royal Embassy of Cambodia in London — FAQ",
+      "url": "https://www.cambodiaembassyuk.org/faq/"
     },
     "status": "visa_free",
     "verified": "2026-11-15"
@@ -398,6 +480,23 @@
     "source": {
       "name": "Ministry of Foreign Affairs Malaysia, Consulate General Davao City",
       "url": "https://www.kln.gov.my/web/phl_davao-city/requirement_foreigner"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Arrival via Yangon, Nay Pyi Taw or Mandalay international airport (stated on the source page for the Myanmar row generally)"
+    ],
+    "destination": "Myanmar",
+    "destination_iso": "MM",
+    "duration": "14 days",
+    "notes": "Wikipedia is the cited source because the official Myanmar eVisa notice page (https://evisa.moip.gov.mm/notice/tourist) could not be fetched and must not be retried. The source page also describes a 28-day e-Visa as an alternative route. No passport-validity condition is recorded: it appeared in search snippets but was not verified on any page read.",
+    "passport": "PH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Wikipedia — Visa requirements for Philippine citizens",
+      "url": "https://en.wikipedia.org/wiki/Visa_requirements_for_Philippine_citizens"
     },
     "status": "visa_free",
     "verified": "2026-11-15"
@@ -486,6 +585,21 @@
     "verified": "2026-11-15"
   },
   {
+    "conditions": [],
+    "destination": "Cambodia",
+    "destination_iso": "KH",
+    "duration": "14 days",
+    "notes": "Regular (ordinary) passport holders: 14 days, from the embassy visa-exemption agreement table headed Updated 08-07-2019. No conditions (passport validity, onward ticket, arrival card) were stated on the page for the exemption, so none are listed. No fee or extension right was verified and none is stated. The official e-Visa portal (evisa.gov.kh) was not read by this researcher.",
+    "passport": "TH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Royal Embassy of Cambodia in London — FAQ",
+      "url": "https://www.cambodiaembassyuk.org/faq/"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
     "conditions": [
       "Valid passport with at least 6 months' validity remaining",
       "Return ticket or onward ticket to another country",
@@ -556,6 +670,21 @@
     "source": {
       "name": "Ministry of Foreign Affairs Malaysia, Consulate General Davao City",
       "url": "https://www.kln.gov.my/web/phl_davao-city/requirement_foreigner"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Myanmar",
+    "destination_iso": "MM",
+    "duration": "14 days",
+    "notes": "Wikipedia fallback, labelled as such. The official eVisa notice page (https://evisa.moip.gov.mm/notice/tourist) could not be read on 2026-11-15 (upstream fetch failed) and was not retried. The Wikipedia table gives visa not required, 14 days, refs [177][178]. The airport-entry condition mentioned in the Wikipedia note (arrival via Yangon, Nay Pyi Taw or Mandalay airports) and any passport-validity condition were NOT verified by this researcher on an official page and are therefore not asserted as conditions. Secondary sources repeat the same 14-day wording, but none was read as an official page and none is cited.",
+    "passport": "TH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Wikipedia — Visa requirements for Thai citizens",
+      "url": "https://en.wikipedia.org/wiki/Visa_requirements_for_Thai_citizens"
     },
     "status": "visa_free",
     "verified": "2026-11-15"
