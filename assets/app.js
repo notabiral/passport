@@ -1,6 +1,6 @@
-/* Passport Switch: load JSON, render the selected passport's index.
-   Three sections: destinations, "with another visa", transit. Search filters
-   all three by destination; the status filter applies to destinations only. */
+/* Passport Switch: load JSON, render the selected passport's ledger.
+   Three sections: main rules, "with another visa", transit. Search filters
+   all three by destination; the status filter applies to main rules only. */
 (function () {
   "use strict";
 
@@ -13,11 +13,11 @@
     visa_required: "Visa required"
   };
   var STATUS_NOTES = {
-    visa_free: "No visa needed for a short visit.",
-    visa_on_arrival: "Visa issued at the border.",
-    evisa: "Apply online before you travel.",
-    eta: "Authorisation before travel. Not a visa.",
-    visa_required: "Apply at an embassy or consulate first."
+    visa_free: "No visa needed before or on arrival for a short visit.",
+    visa_on_arrival: "Visa issued at the border. Check where it is issued before you fly.",
+    evisa: "Apply online before travel. Do not fly without the approval.",
+    eta: "Electronic travel authorisation before travel. Not a visa, but still required.",
+    visa_required: "Apply at an embassy or consulate before travel."
   };
   var TRANSIT_ORDER = ["transit_visa", "transit_visa_restricted"];
   var TRANSIT_LABELS = {
@@ -25,8 +25,8 @@
     transit_visa_restricted: "Transit visa — no exemption"
   };
   var TRANSIT_NOTES = {
-    transit_visa: "Needed airside, unless a held visa exempts you.",
-    transit_visa_restricted: "Needed airside. No held-visa exemption."
+    transit_visa: "A transit visa is needed to stay airside, unless you hold one of the listed visas or permits.",
+    transit_visa_restricted: "A transit visa is needed to stay airside, with no held-visa exemption."
   };
 
   var state = { passport: "VN", status: "all", query: "" };
@@ -77,21 +77,19 @@
     return { rules: n(rules), substitute: n(substitute), transit: n(transit) };
   }
 
-  function currentPassport() {
-    var found = passports.filter(function (p) { return p.code === state.passport; })[0];
-    return found || null;
-  }
-
   function renderPicker() {
     var picker = document.getElementById("passport-picker");
     picker.innerHTML = "";
     passports.forEach(function (p) {
-      var btn = el("button", "segment");
+      var c = countsFor(p.code);
+      var btn = el("button", "plate");
       btn.type = "button";
       btn.setAttribute("aria-pressed", p.code === state.passport ? "true" : "false");
       btn.dataset.code = p.code;
-      btn.appendChild(el("span", "segment-code", p.code));
-      btn.appendChild(el("span", "segment-name", p.name));
+      btn.appendChild(el("span", "plate-code", p.code));
+      btn.appendChild(el("span", "plate-name", p.name + " passport"));
+      btn.appendChild(el("small", null, "Henley " + p.henley_score + " destinations (" + p.henley_as_of + ")"));
+      btn.appendChild(el("small", null, c.rules + " destinations · " + c.substitute + " another-visa · " + c.transit + " transit"));
       btn.addEventListener("click", function () {
         state.passport = p.code;
         renderPicker();
@@ -99,22 +97,11 @@
       });
       picker.appendChild(btn);
     });
-    var current = currentPassport();
-    var meta = document.getElementById("picker-meta");
-    if (current && meta) {
-      var c = countsFor(current.code);
-      meta.textContent = current.name + " passport · Henley " + current.henley_score +
-        " destinations (" + current.henley_as_of + ") · " +
-        c.rules + " destinations · " + c.substitute + " another-visa · " + c.transit + " transit";
-    }
   }
 
-  function renderHeroFacts() {
-    var facts = document.getElementById("hero-facts");
-    if (!facts) return;
-    var total = rules.length + substitute.length + transit.length;
-    facts.textContent = passports.length + " passports · " + total +
-      " verified entries · Every entry dated and sourced.";
+  function currentPassport() {
+    var found = passports.filter(function (p) { return p.code === state.passport; })[0];
+    return found || null;
   }
 
   function appendConditions(row, item) {
@@ -145,7 +132,7 @@
     row.dataset.status = r.status;
     var head = el("div", "row-head");
     head.appendChild(el(headingTag, null, r.destination));
-    var chip = el("span", "chip" + (r.status === "visa_required" ? " chip-dark" : ""), STATUS_LABELS[r.status] || r.status);
+    var chip = el("span", "chip", STATUS_LABELS[r.status] || r.status);
     chip.dataset.status = r.status;
     head.appendChild(chip);
     head.appendChild(el("span", "duration", r.duration));
@@ -173,21 +160,21 @@
     var head = el("div", "row-head");
     head.appendChild(el(headingTag, null, item.destination));
     if (isTransit) {
-      var chip = el("span", "chip" + (item.status === "transit_visa_restricted" ? " chip-dark" : ""), TRANSIT_LABELS[item.status] || item.status);
+      var chip = el("span", "chip", TRANSIT_LABELS[item.status] || item.status);
       chip.dataset.status = item.status;
       head.appendChild(chip);
     } else {
-      head.appendChild(el("span", "chip", "With another visa"));
+      head.appendChild(el("span", "chip chip-neutral", "With another visa"));
     }
     head.appendChild(el("span", "duration", item.duration));
     if (item.fee) head.appendChild(el("span", "fee", "Fee: " + item.fee));
     row.appendChild(head);
-    var device = el("p", "hold-line");
-    device.appendChild(el("span", "hold", "Hold: " + item.requires));
-    var arrow = el("span", "arrow", "→");
+    var device = el("p", "device");
+    device.appendChild(el("span", "device-hold", "Hold: " + item.requires));
+    var arrow = el("span", "device-arrow", "→");
     arrow.setAttribute("aria-hidden", "true");
     device.appendChild(arrow);
-    device.appendChild(el("span", "benefit", item.benefit));
+    device.appendChild(el("span", "device-benefit", item.benefit));
     row.appendChild(device);
     appendHeldChips(row, item);
     appendConditions(row, item);
@@ -196,8 +183,9 @@
     return row;
   }
 
-  function sectionHead(title, countText) {
+  function sectionHead(num, title, countText) {
     var head = el("div", "section-head");
+    head.appendChild(el("span", "section-num", num));
     head.appendChild(el("h2", null, title));
     head.appendChild(el("span", "section-count", countText));
     return head;
@@ -208,15 +196,18 @@
   }
 
   function renderMainSection(container) {
-    var section = el("section", "section");
-    section.id = "destinations";
+    var section = el("section", "ledger-section");
     var list = filteredRules();
     var total = forPassport(rules).length;
-    section.appendChild(sectionHead("Destinations", list.length + " of " + total + " shown"));
+    section.appendChild(sectionHead("01", "Where this passport goes", list.length + " of " + total + " shown"));
+    var current = currentPassport();
+    if (current) {
+      section.appendChild(el("p", "current-line", "Travelling on a " + current.name + " passport"));
+    }
     document.getElementById("result-count").textContent =
       list.length + " of " + total + " verified destinations shown";
     if (!list.length) {
-      section.appendChild(emptyNote("No verified destinations match this view."));
+      section.appendChild(emptyNote("No verified destinations match this view. Unverified destinations are omitted on purpose: see the coverage note below."));
       container.appendChild(section);
       return;
     }
@@ -236,16 +227,15 @@
   }
 
   function renderSubstituteSection(container) {
-    var section = el("section", "section");
-    section.id = "another-visa";
+    var section = el("section", "ledger-section");
     var list = filteredSubstitute().sort(byDestination);
     var total = forPassport(substitute).length;
-    section.appendChild(sectionHead("With another visa", list.length + " of " + total + " shown"));
-    section.appendChild(el("p", "section-note", "Places a visa you already hold opens up."));
+    section.appendChild(sectionHead("02", "With another visa", list.length + " of " + total + " shown"));
+    section.appendChild(el("p", "section-note", "Extra doors: places this passport can enter without their own visa, when a valid visa or permit for another country is already in the passport."));
     if (!total) {
-      section.appendChild(emptyNote("No verified entries for this passport yet."));
+      section.appendChild(emptyNote("No verified entries for this passport yet. A destination appears here only when its substitute-visa rule has been checked for this passport."));
     } else if (!list.length) {
-      section.appendChild(emptyNote("Nothing in this section matches your search."));
+      section.appendChild(emptyNote("No destinations in this section match your search."));
     } else {
       var rows = el("div", "rows");
       list.forEach(function (item) { rows.appendChild(renderExtraRow(item, "h3", false)); });
@@ -255,16 +245,15 @@
   }
 
   function renderTransitSection(container) {
-    var section = el("section", "section");
-    section.id = "transit";
+    var section = el("section", "ledger-section");
     var list = filteredTransit();
     var total = forPassport(transit).length;
-    section.appendChild(sectionHead("Transit visa", list.length + " of " + total + " shown"));
-    section.appendChild(el("p", "section-note", "Visas needed even to stay airside. Places you can transit without one are not listed."));
+    section.appendChild(sectionHead("03", "Transit visa", list.length + " of " + total + " shown"));
+    section.appendChild(el("p", "section-note", "Places where this passport needs a visa even to stay airside and change planes — and whether a visa you already hold gets you through without one. Places this passport can transit without a visa do not appear here."));
     if (!total) {
-      section.appendChild(emptyNote("No verified entries for this passport yet."));
+      section.appendChild(emptyNote("No verified entries for this passport yet. A destination appears here only when its transit requirement has been checked for this passport."));
     } else if (!list.length) {
-      section.appendChild(emptyNote("Nothing in this section matches your search."));
+      section.appendChild(emptyNote("No destinations in this section match your search."));
     } else {
       TRANSIT_ORDER.forEach(function (status) {
         var group = list.filter(function (r) { return r.status === status; });
@@ -341,7 +330,6 @@
         state.passport = passports[0].code;
       }
       renderPicker();
-      renderHeroFacts();
       renderResults();
       renderCoverage();
     }).catch(function () {
