@@ -1,0 +1,26 @@
+[
+  {
+    "code": "VN",
+    "henley_as_of": "2026-07",
+    "henley_score": 48,
+    "name": "Vietnam"
+  },
+  {
+    "code": "ID",
+    "henley_as_of": "2026-07",
+    "henley_score": 70,
+    "name": "Indonesia"
+  },
+  {
+    "code": "PH",
+    "henley_as_of": "2026-07",
+    "henley_score": 65,
+    "name": "Philippines"
+  },
+  {
+    "code": "TH",
+    "henley_as_of": "2026-07",
+    "henley_score": 77,
+    "name": "Thailand"
+  }
+]

@@ -1,0 +1,132 @@
+:root {
+  --paper: #faf7f1;
+  --card: #fffdf9;
+  --ink: #1c1a17;
+  --muted: #6b655c;
+  --line: #ddd5c8;
+  --stamp-red: #b3402e;
+  --stamp-blue: #24507a;
+  --green: #2e6b3e;
+  --amber: #8a5a12;
+  --slate: #4c5560;
+  --radius: 10px;
+  --max: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+a { color: var(--stamp-blue); }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px 48px; }
+
+/* Masthead with passport-stamp character */
+.masthead { border-bottom: 3px double var(--ink); padding: 28px 0 18px; margin-bottom: 18px; }
+.masthead-top { display: flex; align-items: flex-start; gap: 16px; justify-content: space-between; }
+h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; margin: 0; letter-spacing: -0.01em; }
+.tagline { font-size: 1.05rem; color: var(--muted); margin: 8px 0 0; }
+.stamp {
+  flex: 0 0 auto;
+  border: 3px solid var(--stamp-red);
+  color: var(--stamp-red);
+  border-radius: 50%;
+  width: 84px; height: 84px;
+  display: grid; place-items: center;
+  text-align: center;
+  font-weight: 800; font-size: 0.72rem; line-height: 1.15;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  transform: rotate(8deg);
+  opacity: 0.9;
+}
+.stamp span { padding: 6px; }
+
+.lede { max-width: 70ch; margin: 0 0 6px; }
+.lede strong { font-weight: 700; }
+
+/* Passport toggle */
+.passport-picker { margin: 20px 0 8px; }
+.picker-label { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+.picker { display: flex; flex-wrap: wrap; gap: 8px; }
+.passport-btn {
+  appearance: none; cursor: pointer;
+  border: 2px solid var(--ink); background: var(--card); color: var(--ink);
+  border-radius: 999px; padding: 9px 14px; font: inherit; font-weight: 650;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 0; line-height: 1.25;
+}
+.passport-btn small { font-weight: 500; color: var(--muted); font-size: 0.78rem; }
+.passport-btn[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.passport-btn[aria-pressed="true"] small { color: #d8d2c7; }
+.passport-btn:focus-visible, .control:focus-visible { outline: 3px solid var(--stamp-blue); outline-offset: 2px; }
+
+/* Controls */
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; margin: 18px 0 6px; }
+.field { display: flex; flex-direction: column; gap: 4px; }
+.field label { font-size: 0.82rem; font-weight: 700; color: var(--muted); }
+.control { font: inherit; padding: 9px 10px; border: 1.5px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); min-width: 200px; }
+.count { margin-left: auto; color: var(--muted); font-size: 0.92rem; }
+
+/* Disclaimer */
+.disclaimer {
+  border: 1.5px dashed var(--stamp-red); border-radius: var(--radius);
+  padding: 10px 14px; margin: 14px 0 8px; background: #fff6f3; font-size: 0.95rem;
+}
+.disclaimer strong { color: var(--stamp-red); }
+
+/* Groups and cards */
+.group-title { font-family: Georgia, serif; font-size: 1.35rem; margin: 28px 0 4px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.group-title .group-count { font-family: inherit; font-size: 0.9rem; color: var(--muted); font-weight: 500; }
+.group-note { color: var(--muted); margin: 0 0 12px; font-size: 0.95rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+
+.card {
+  background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--slate);
+  border-radius: var(--radius); padding: 16px; position: relative;
+}
+.card[data-status="visa_free"] { border-left-color: var(--green); }
+.card[data-status="visa_on_arrival"] { border-left-color: var(--stamp-blue); }
+.card[data-status="evisa"], .card[data-status="eta"] { border-left-color: var(--amber); }
+.card[data-status="visa_required"] { border-left-color: var(--stamp-red); }
+.card h3 { margin: 0 0 4px; font-size: 1.2rem; line-height: 1.25; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 10px; }
+.badge {
+  display: inline-block; font-size: 0.78rem; font-weight: 750; letter-spacing: 0.02em;
+  border-radius: 999px; padding: 3px 9px; border: 1.5px solid currentColor; text-transform: uppercase;
+}
+.badge[data-status="visa_free"] { color: var(--green); }
+.badge[data-status="visa_on_arrival"] { color: var(--stamp-blue); }
+.badge[data-status="evisa"], .badge[data-status="eta"] { color: var(--amber); }
+.badge[data-status="visa_required"] { color: var(--stamp-red); }
+.duration { font-weight: 650; }
+.fee { color: var(--muted); }
+.card ul { margin: 8px 0; padding-left: 20px; }
+.card li { margin: 3px 0; }
+.notes, .extension { font-size: 0.95rem; margin: 8px 0; }
+.source-line { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 9px; font-size: 0.88rem; color: var(--muted); }
+.source-line a { word-break: break-word; }
+
+.empty, .error {
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--card);
+  padding: 18px; margin-top: 20px;
+}
+
+.coverage { color: var(--muted); font-size: 0.92rem; margin-top: 24px; }
+.coverage ul { margin: 6px 0; }
+
+footer { border-top: 1px solid var(--line); margin-top: 32px; padding-top: 16px; color: var(--muted); font-size: 0.9rem; }
+footer p { margin: 6px 0; }
+
+@media (max-width: 640px) {
+  .stamp { width: 64px; height: 64px; font-size: 0.6rem; }
+  .control { min-width: 0; width: 100%; }
+  .field { flex: 1 1 100%; }
+  .count { margin-left: 0; }
+  .grid { grid-template-columns: 1fr; }
+  .passport-btn { flex: 1 1 45%; }
+}

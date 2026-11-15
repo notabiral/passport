@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Passport Switch — Pick a passport, see where it takes you</title>
+<meta name="description" content="Visa guides for Vietnam, Indonesia, Philippines and Thailand passports. Every rule links to an official government source and carries a verified date.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="masthead-top">
+      <div>
+        <h1>Passport Switch</h1>
+        <p class="tagline">Pick a passport, see where it takes you.</p>
+      </div>
+      <div class="stamp" aria-hidden="true"><span>Verified<br>Official<br>Sources<br>Only</span></div>
+    </div>
+  </header>
+
+  <p class="lede"><strong>For travellers on weaker passports, the question is never just where to go, it is which borders will let you in.</strong> Switch passports above and the whole guide switches with you. Every card below links to an official government source and shows the date it was last checked. If a destination could not be verified, it is left out rather than guessed.</p>
+
+  <section class="passport-picker" aria-label="Choose a passport">
+    <p class="picker-label">Your passport</p>
+    <div class="picker" id="passport-picker"></div>
+  </section>
+
+  <h2 id="current-passport">Travelling on a Vietnam passport</h2>
+
+  <div class="controls">
+    <div class="field">
+      <label for="status-filter">Status</label>
+      <select class="control" id="status-filter">
+        <option value="all">All statuses</option>
+        <option value="visa_free">Visa-free</option>
+        <option value="visa_on_arrival">Visa on arrival</option>
+        <option value="evisa">eVisa</option>
+        <option value="eta">ETA</option>
+        <option value="visa_required">Visa required</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="search">Search destinations</label>
+      <input class="control" id="search" type="search" placeholder="e.g. Japan" autocomplete="off">
+    </div>
+    <p class="count" id="result-count" aria-live="polite"></p>
+  </div>
+
+  <p class="disclaimer"><strong>Rules change.</strong> Always re-check the official page linked on each card, and confirm with your airline, before you book. This site is informational only.</p>
+
+  <main id="results" aria-live="polite"></main>
+
+  <p class="coverage" id="coverage"></p>
+
+  <noscript><p class="error">This guide needs JavaScript to switch passports. The data files are plain JSON in <code>data/</code> and can be read directly.</p></noscript>
+
+  <footer>
+    <p><strong>How this works.</strong> Tourism and short visits only, ordinary passports only. Henley Passport Index scores shown under each passport are display context only, July 2026. The rules themselves come only from official government sources, each with a verified date. See <a href="https://github.com/notabiral/passport/blob/main/DATA_POLICY.md">DATA_POLICY.md</a> and <a href="https://github.com/notabiral/passport/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+    <p>Inspired by <a href="https://nepalipassportdiaries.therashverse.com/">The Nepali Passport Diaries</a> by Rashika Karki, generalised here to multiple passports. No data was copied from that site; every rule here was researched fresh against official sources.</p>
+    <p>Spotted an error? Open an issue or pull request on <a href="https://github.com/notabiral/passport">GitHub</a> with the official source and the date you checked it.</p>
+  </footer>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

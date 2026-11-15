@@ -1,0 +1,633 @@
+[
+  {
+    "conditions": [],
+    "destination": "Brunei",
+    "destination_iso": "BN",
+    "duration": "14 days",
+    "notes": "Vietnam appears in the visa-arrangement exception table without a visa-on-arrival qualifier.",
+    "passport": "VN",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs, Brunei Darussalam",
+      "url": "https://www.mfa.gov.bn/malaysia-kl/SitePages/consularservices.aspx"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Cambodia",
+    "destination_iso": "KH",
+    "duration": "30 days",
+    "notes": "Duration from the embassy exemption table headed Updated 08-07-2019. The exemption itself is corroborated by the current official e-Visa portal (1 Jan 2025), which names Vietnam under Visa Exemption.",
+    "passport": "VN",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Royal Embassy of Cambodia in London",
+      "url": "https://www.cambodiaembassyuk.org/faq/"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Valid passport, valid at least 6 months",
+      "Return ticket or onward ticket to another country",
+      "Permitted activities: tourism, visiting family, attending meetings, incentives, conventions or exhibitions, transit",
+      "Must not sell goods or services or receive payment or wages for work in Indonesia"
+    ],
+    "destination": "Indonesia",
+    "destination_iso": "ID",
+    "duration": "30 days",
+    "extension": "Cannot be extended and cannot be converted to another stay permit.",
+    "fee": "Rp0",
+    "notes": "A1 visa-free facility for ASEAN nationals. The country list naming Vietnam was read on a Directorate General of Immigration regional-office page.",
+    "passport": "VN",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Directorate General of Immigration, Indonesia — A1 visa-free facility",
+      "url": "https://www.imigrasi.go.id/wna/daftar-visa-indonesia/A1"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Japan",
+    "destination_iso": "JP",
+    "duration": "Per visa issued",
+    "notes": "Vietnam is absent from the 74-country and region visa-exemption list. The Ministry of Foreign Affairs maintains a dedicated visa-application page for nationals of Viet Nam.",
+    "passport": "VN",
+    "region": "East Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs of Japan — Exemption of Visa (Short-Term Stay)",
+      "url": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html"
+    },
+    "status": "visa_required",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Laos",
+    "destination_iso": "LA",
+    "duration": "30 days",
+    "notes": "Bilateral visa-exemption agreement; ordinary passports, in force 5 March 2004.",
+    "passport": "VN",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs, Lao PDR — Visa Exemption Agreement list",
+      "url": "https://www.mofa.gov.la/gweb/gweb/backend/web/index.php?r=site/downloadfile&file=_J372876QbPE3GhiLGXCOH/46f49ea89aaddb9e6ad50303373070a4.pdf"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Passport valid at least 6 months",
+      "Prove financial ability to support yourself, plus a fixed return ticket",
+      "Complete the Malaysia Digital Arrival Card (MDAC) and present passport and completed MDAC to the immigration officer"
+    ],
+    "destination": "Malaysia",
+    "destination_iso": "MY",
+    "duration": "Less than 1 month",
+    "notes": "General ASEAN rule: visa is not required for a stay of less than one month for ASEAN nationals except Myanmar. A visa is required if the stay exceeds one month.",
+    "passport": "VN",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs Malaysia, Consulate General Davao City",
+      "url": "https://www.kln.gov.my/web/phl_davao-city/requirement_foreigner"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Passport valid at least 6 months beyond the contemplated period of stay",
+      "Return ticket to country of origin or onward ticket to next destination",
+      "Not subject to a blacklist or deportation order of the DFA or Bureau of Immigration"
+    ],
+    "destination": "Philippines",
+    "destination_iso": "PH",
+    "duration": "30 days",
+    "extension": "Visitors intending to stay longer apply directly to the Philippine Bureau of Immigration in the Philippines.",
+    "notes": "Initial stay of 30 days under Executive Order 408.",
+    "passport": "VN",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Philippine Embassy, Ottawa (DFA) — Visa",
+      "url": "https://sites.google.com/dfa.gov.ph/ottawa-pe-consular-section/other-services/visa"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Submit the SG Arrival Card within 3 days before arriving in Singapore; it is not a visa",
+      "Period of stay is determined by the electronic Visit Pass (e-Pass) issued at the checkpoint"
+    ],
+    "destination": "Singapore",
+    "destination_iso": "SG",
+    "duration": "As granted on the e-Pass at the checkpoint",
+    "extension": "To stay longer, apply to extend the Short-Term Visit Pass (STVP).",
+    "notes": "Singapore publishes a visa-required list, not a visa-free list. Vietnam is absent from the official visa-required list (checked 15 November 2026). No fixed duration is published; do not assume 30 days.",
+    "passport": "VN",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Embassy of the Republic of Singapore in Manila — Visa Information",
+      "url": "https://manila.mfa.gov.sg/visa-information/"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Passport must remain valid throughout the stay in Korea; no remainder-validity requirement",
+      "Submit an e-Arrival card within 3 days before arrival"
+    ],
+    "destination": "South Korea",
+    "destination_iso": "KR",
+    "duration": "Per visa issued",
+    "notes": "Vietnam is absent from the K-ETA eligible-countries list. The embassy rule is: if you cannot find your country, you must apply for a visa. K-ETA does not apply to Vietnamese nationals.",
+    "passport": "VN",
+    "region": "East Asia",
+    "source": {
+      "name": "Embassy of the Republic of Korea, Singapore — Travelling to Korea",
+      "url": "https://overseas.mofa.go.kr/sg-en/brd/m_2435/view.do?page=1&seq=761395"
+    },
+    "status": "visa_required",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Passport or travel document valid at least 6 months on the day of arrival",
+      "Adequate funds: 20,000 THB per person or 40,000 THB per family (or equivalent)",
+      "Entry through land or sea border checkpoints under the exemption permitted only twice per calendar year; Vietnam is not among the excepted nationalities"
+    ],
+    "destination": "Thailand",
+    "destination_iso": "TH",
+    "duration": "30 days",
+    "notes": "Vietnam's 30 days come from a bilateral agreement, not the general exemption scheme.",
+    "passport": "VN",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Royal Thai Embassy, Vienna — Tourist Visa Exemption",
+      "url": "https://www.thaiembassy.at/en/content_page/item/403-summary-of-countries-and-territories-entitled-for-visa-exemption-and-visa-on-arrival-to-thailand.html?preview=1"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Passport valid at least 6 months beyond the date of entry",
+      "Confirmed return air ticket"
+    ],
+    "destination": "Brunei",
+    "destination_iso": "BN",
+    "duration": "14 days",
+    "notes": "Indonesia appears in the visa-arrangement table without a visa-on-arrival qualifier. The conditions are the general requirements stated on the same official page.",
+    "passport": "ID",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs, Brunei Darussalam — Visa Arrangement",
+      "url": "https://www.mfa.gov.bn/malaysia-kl/SitePages/visaarrangement.aspx"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Must hold an ICAO-compliant ePassport AND have registered it with a diplomatic mission of Japan in Indonesia before travel",
+      "Registration validity: 3 years or until the passport expires, whichever comes first"
+    ],
+    "destination": "Japan",
+    "destination_iso": "JP",
+    "duration": "15 days",
+    "notes": "CONDITIONAL exemption only. Holders of non-e-passports need a visa. This is not an eVisa; it is a visa exemption subject to prior e-passport registration.",
+    "passport": "ID",
+    "region": "East Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs of Japan — Exemption of Visa (Short-Term Stay)",
+      "url": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Laos",
+    "destination_iso": "LA",
+    "duration": "30 days",
+    "notes": "Ordinary passports, agreement in force 23 September 2011.",
+    "passport": "ID",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs, Lao PDR — Visa Exemption Agreement list",
+      "url": "https://www.mofa.gov.la/gweb/gweb/backend/web/index.php?r=site/downloadfile&file=_J372876QbPE3GhiLGXCOH/46f49ea89aaddb9e6ad50303373070a4.pdf"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Passport valid at least 6 months"
+    ],
+    "destination": "Malaysia",
+    "destination_iso": "MY",
+    "duration": "Less than 1 month",
+    "notes": "General ASEAN rule: visa is not required for a stay of less than one month for ASEAN nationals except Myanmar. Verified via the same official page as the Vietnam and Philippines rules.",
+    "passport": "ID",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs Malaysia, Consulate General Davao City",
+      "url": "https://www.kln.gov.my/web/phl_davao-city/requirement_foreigner"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Passport valid at least 6 months beyond the contemplated period of stay",
+      "Return ticket to country of origin or onward ticket to next destination",
+      "Not subject to a blacklist or deportation order of the DFA or Bureau of Immigration"
+    ],
+    "destination": "Philippines",
+    "destination_iso": "PH",
+    "duration": "30 days",
+    "extension": "Visitors who intend to stay longer apply directly to the Philippine Bureau of Immigration when already in the Philippines.",
+    "notes": "Initial stay of 30 days under Executive Order 408.",
+    "passport": "ID",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Philippine Embassy, Ottawa (DFA) — Visa",
+      "url": "https://sites.google.com/dfa.gov.ph/ottawa-pe-consular-section/other-services/visa"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Submit the SG Arrival Card within 3 days before arriving in Singapore; it is not a visa",
+      "Period of stay is determined by the electronic Visit Pass (e-Pass) issued at the checkpoint",
+      "Entry is decided by ICA officers at the checkpoint"
+    ],
+    "destination": "Singapore",
+    "destination_iso": "SG",
+    "duration": "As granted on the e-Pass at the checkpoint",
+    "extension": "To stay longer, apply to extend the Short-Term Visit Pass (STVP).",
+    "notes": "Singapore publishes a visa-required list, not a visa-free list. Indonesia is absent from the official visa-required list. No fixed duration is published; do not assume 30 days.",
+    "passport": "ID",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Embassy of the Republic of Singapore in Manila — Visa Information",
+      "url": "https://manila.mfa.gov.sg/visa-information/"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "South Korea",
+    "destination_iso": "KR",
+    "duration": "Per visa issued",
+    "notes": "K-ETA applies only to visa-exemption countries and does not apply to Indonesia. Source notice is dated 20 October 2022; no newer official reversal was found in searches. Re-confirm before travel.",
+    "passport": "ID",
+    "region": "East Asia",
+    "source": {
+      "name": "Embassy of the Republic of Korea in Indonesia — K-ETA information",
+      "url": "https://overseas.mofa.go.kr/id-id/brd/m_2710/view.do?company_cd=&company_nm=&itm_seq_1=0&itm_seq_2=0&multi_itm_seq=0&seq=748825&srchFr=&srchTo=&srchTp=&srchWord="
+    },
+    "status": "visa_required",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Tourism only",
+      "The twice-per-calendar-year land-border entry limit does not apply to nationals of Indonesia"
+    ],
+    "destination": "Thailand",
+    "destination_iso": "TH",
+    "duration": "30 days",
+    "notes": "New framework effective 15 September 2026, replacing the 60-day exemption.",
+    "passport": "ID",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Tourism Authority of Thailand (TAT) Newsroom",
+      "url": "https://www.tatnews.org/2026/09/thailand-introduces-new-30-day-and-15-day-visa-exemption-rules-from-15-september/"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Brunei",
+    "destination_iso": "BN",
+    "duration": "Up to 14 days",
+    "notes": "For a stay of more than 14 days (up to 3 months), a visa can be obtained from the Embassy.",
+    "passport": "PH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs, Brunei Darussalam — Embassy in Manila",
+      "url": "https://www.mfa.gov.bn/philippines_manila/SitePages/Travelling%20to%20Brunei%20Darussalam.aspx"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Passport valid for at least 6 months",
+      "Return ticket or onward ticket to another country",
+      "Purposes: tourism, visiting family, attending meetings, incentives, conventions or exhibitions, or transit",
+      "Must not sell goods or services or receive payment or wages for work in Indonesia",
+      "May apply in advance electronically via evisa.imigrasi.go.id, or show documents at the immigration counter on arrival"
+    ],
+    "destination": "Indonesia",
+    "destination_iso": "ID",
+    "duration": "30 days",
+    "extension": "Cannot be extended and cannot be converted to another stay permit.",
+    "fee": "Rp0",
+    "notes": "A1 visa-free facility. Single entry, stay counted from date of arrival. Philippines is named on the official visa-free-visit country list.",
+    "passport": "PH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Directorate General of Immigration, Indonesia — A1 visa-free facility",
+      "url": "https://www.imigrasi.go.id/wna/daftar-visa-indonesia/A1"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Japan",
+    "destination_iso": "JP",
+    "duration": "Per visa issued",
+    "notes": "Philippines is absent from the 74-country and region visa-exemption table. Ordinary passports are not covered.",
+    "passport": "PH",
+    "region": "East Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs of Japan — Exemption of Visa (Short-Term Stay)",
+      "url": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html"
+    },
+    "status": "visa_required",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Laos",
+    "destination_iso": "LA",
+    "duration": "30 days",
+    "notes": "Ordinary passports, agreement in force 10 April 2005.",
+    "passport": "PH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs, Lao PDR — Visa Exemption Agreement list",
+      "url": "https://www.mofa.gov.la/gweb/gweb/backend/web/index.php?r=site/downloadfile&file=_J372876QbPE3GhiLGXCOH/46f49ea89aaddb9e6ad50303373070a4.pdf"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Passport valid at least 6 months"
+    ],
+    "destination": "Malaysia",
+    "destination_iso": "MY",
+    "duration": "Less than 1 month",
+    "notes": "General ASEAN rule: visa is not required for a stay of less than one month for ASEAN nationals except Myanmar. Visas are required for stays exceeding one month, except for Brunei and Singapore nationals.",
+    "passport": "PH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs Malaysia, Consulate General Davao City",
+      "url": "https://www.kln.gov.my/web/phl_davao-city/requirement_foreigner"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Valid travel document, minimum validity 6 months at time of departure",
+      "Confirmed onward or return tickets, entry facilities to the next destination, and sufficient funds for the stay",
+      "Submit the SG Arrival Card within 3 days before arriving in Singapore; it is not a visa",
+      "Entry is subject to ICA officers' decision at the checkpoint"
+    ],
+    "destination": "Singapore",
+    "destination_iso": "SG",
+    "duration": "As granted on the e-Pass at the checkpoint",
+    "extension": "A Short-Term Visit Pass may be extended by application, subject to ICA assessment.",
+    "notes": "Singapore publishes a visa-required list, not a visa-free list. Philippines is absent from the exhaustive official visa-required list. No fixed duration is published; stay is set by the e-Pass at the checkpoint.",
+    "passport": "PH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Embassy of the Republic of Singapore in Manila — Visa Information",
+      "url": "https://manila.mfa.gov.sg/visa-information/"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "South Korea",
+    "destination_iso": "KR",
+    "duration": "Per visa issued",
+    "notes": "Philippines is absent from the official K-ETA eligible-countries list. K-ETA does not apply to Philippine nationals.",
+    "passport": "PH",
+    "region": "East Asia",
+    "source": {
+      "name": "K-ETA official portal, Ministry of Justice, Republic of Korea",
+      "url": "https://www.k-eta.go.kr/portal/guide/viewetaalification.do"
+    },
+    "status": "visa_required",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Travellers using the 30-day exemption through land-border checkpoints may generally enter no more than twice per calendar year; Philippines is subject to this limit"
+    ],
+    "destination": "Thailand",
+    "destination_iso": "TH",
+    "duration": "30 days",
+    "notes": "New 30-day and 15-day exemption rules effective 15 September 2026, replacing the previous 60-day measure.",
+    "passport": "PH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Tourism Authority of Thailand (TAT) Newsroom",
+      "url": "https://www.tatnews.org/2026/09/thailand-introduces-new-30-day-and-15-day-visa-exemption-rules-from-15-september/"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Vietnam",
+    "destination_iso": "VN",
+    "duration": "21 days",
+    "notes": "Ordinary passports 21 days; diplomatic and official passports 30 days. List is the September 2025 version hosted on hef.gov.vn, a Vietnamese government domain.",
+    "passport": "PH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Viet Nam's Visa Exemption List (September 2025)",
+      "url": "https://hef.gov.vn/wp-content/uploads/2025/11/1.-Vietnams-visa-exemption-list.pdf"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Brunei",
+    "destination_iso": "BN",
+    "duration": "14 days",
+    "notes": "Ordinary passports 14 days; diplomatic and official passports 30 days. A visa application is required for stays longer than the waiver period and for business or professional visits.",
+    "passport": "TH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs, Brunei — Consular Services, Sabah",
+      "url": "https://www.mfa.gov.bn/malaysia-sabah/SitePages/consularservices.aspx"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Valid passport with at least 6 months' validity remaining",
+      "Return ticket or onward ticket to another country",
+      "Permitted purposes: tourism, visiting family, meetings, incentives, conventions or exhibitions, and transit",
+      "Must not sell goods or services or receive payment or wages from persons or companies in Indonesia",
+      "Submit an arrival card within 3 days before arrival"
+    ],
+    "destination": "Indonesia",
+    "destination_iso": "ID",
+    "duration": "30 days",
+    "extension": "Cannot be extended and cannot be converted to another stay permit.",
+    "fee": "Rp0",
+    "notes": "A1 visa-free facility for ASEAN nationals. Single entry; stay counted from date of arrival.",
+    "passport": "TH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Directorate General of Immigration, Indonesia — A1 visa-free facility",
+      "url": "https://www.imigrasi.go.id/wna/daftar-visa-indonesia/A1"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Must hold an ICAO-compliant ePassport; Thai nationals without such an ePassport must obtain a visa in advance, otherwise they will be refused entry to Japan"
+    ],
+    "destination": "Japan",
+    "destination_iso": "JP",
+    "duration": "15 days",
+    "notes": "Period of stay granted on landing permission is 15 days for Thailand. The ePassport condition is the single most important condition for this route.",
+    "passport": "TH",
+    "region": "East Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs of Japan — Exemption of Visa (Short-Term Stay)",
+      "url": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Laos",
+    "destination_iso": "LA",
+    "duration": "30 days",
+    "notes": "Ordinary passports, agreement in force 28 October 2004. Confirmed by coordinator check of the official MFA list on 15 November 2026.",
+    "passport": "TH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs, Lao PDR — Visa Exemption Agreement list",
+      "url": "https://www.mofa.gov.la/gweb/gweb/backend/web/index.php?r=site/downloadfile&file=_J372876QbPE3GhiLGXCOH/46f49ea89aaddb9e6ad50303373070a4.pdf"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Passport or travel document valid for 6 months or more from date of entry",
+      "Valid return ticket and sufficient expenses",
+      "Complete the Malaysia Digital Arrival Card (MDAC) and present passport and completed MDAC to the immigration officer",
+      "Final admission decision is at the discretion of the immigration officer at the gate"
+    ],
+    "destination": "Malaysia",
+    "destination_iso": "MY",
+    "duration": "Less than 1 month",
+    "notes": "General ASEAN rule: visa is not required for a stay of less than one month for ASEAN nationals except Myanmar. Verified via the same official page as the Vietnam and Philippines rules. Conditions are the general visitor requirements in the Immigration Department entry-requirements document.",
+    "passport": "TH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Ministry of Foreign Affairs Malaysia, Consulate General Davao City",
+      "url": "https://www.kln.gov.my/web/phl_davao-city/requirement_foreigner"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Passport valid for at least 6 months beyond the contemplated period of stay, and return ticket to country of origin or onward ticket to next destination"
+    ],
+    "destination": "Philippines",
+    "destination_iso": "PH",
+    "duration": "30 days",
+    "notes": "Thailand is named on the Bureau of Immigration list of nationalities allowed entry without a visa for up to 30 days under Executive Order 408. Nuance: Thailand is also on the list of nationalities who may be admitted with a passport of less than 6 months' validity from arrival, provided their embassy or consulate in the Philippines can renew or extend the passport and no other ground to deny entry exists. Do not present 6 months as absolute for Thai nationals.",
+    "passport": "TH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Bureau of Immigration, Philippines — Operations Order No. SBM-2015-026",
+      "url": "https://immigration.gov.ph/wp-content/uploads/2023/12/SBM-2015-026.pdf"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Submit the SG Arrival Card within 3 days before arriving in Singapore; it is not a visa",
+      "Period of stay is determined by the electronic Visit Pass (e-Pass) issued at the checkpoint",
+      "A visa or entry permission does not guarantee entry; ICA officers at the checkpoint decide"
+    ],
+    "destination": "Singapore",
+    "destination_iso": "SG",
+    "duration": "As granted on the e-Pass at the checkpoint",
+    "extension": "To stay longer, apply to extend the Short-Term Visit Pass (STVP).",
+    "notes": "Singapore publishes a visa-required list, not a visa-free list. Thailand is absent from the official visa-required list (coordinator check, 15 November 2026). No fixed duration is published.",
+    "passport": "TH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Embassy of the Republic of Singapore in Manila — Visa Information",
+      "url": "https://manila.mfa.gov.sg/visa-information/"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [
+      "Approved K-ETA required before travel; apply only via the official K-ETA website or app",
+      "Purpose must be tourism, visiting family, events or meetings, or commercial business excluding pursuit of profit"
+    ],
+    "destination": "South Korea",
+    "destination_iso": "KR",
+    "duration": "90 days",
+    "notes": "Thailand is visa-exempt but K-ETA-required. Thailand is explicitly on the K-ETA Required list and is not among the temporarily exempt countries. Fee, validity and age exemptions were not verified on an official page and are omitted.",
+    "passport": "TH",
+    "region": "East Asia",
+    "source": {
+      "name": "K-ETA official portal, Ministry of Justice, Republic of Korea",
+      "url": "https://www.k-eta.go.kr/portal/guide/viewetaalification.do"
+    },
+    "status": "eta",
+    "verified": "2026-11-15"
+  },
+  {
+    "conditions": [],
+    "destination": "Vietnam",
+    "destination_iso": "VN",
+    "duration": "30 days",
+    "notes": "Bilateral visa-exemption agreement with Thailand in force since 9 July 2000.",
+    "passport": "TH",
+    "region": "Southeast Asia",
+    "source": {
+      "name": "Viet Nam's Visa Exemption List (September 2025)",
+      "url": "https://hef.gov.vn/wp-content/uploads/2025/11/1.-Vietnams-visa-exemption-list.pdf"
+    },
+    "status": "visa_free",
+    "verified": "2026-11-15"
+  }
+]
