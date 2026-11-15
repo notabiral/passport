@@ -26,19 +26,19 @@ Three sections, all switching with the passport picker:
    The 8 rules v1 could not verify were filled in v2: 4 from official
    sources and 4 from labelled Wikipedia sources where the official page
    could not be read (see `DATA_POLICY.md`).
-2. **With another visa** (`data/substitute_visa.json`): 12 destinations
-   (Mexico, Georgia, Albania, Montenegro, Moldova, Morocco, Türkiye,
+2. **With another visa** (`data/substitute_visa.json`): 11 destinations
+   (Mexico, Georgia, Albania, Montenegro, Moldova, Türkiye,
    Argentina, Panama, Antigua and Barbuda, Bahrain, Costa Rica) where a
    held visa or permit changes the route. 30 verified entries (Vietnam 7,
    Indonesia 9, Philippines 8, Thailand 6). A destination appears only
    when its substitute rule was checked for that passport; already
    visa-free destinations and unverifiable rules are omitted.
-3. **Transit visa** (`data/transit.json`): 12 destinations (United
-   Kingdom, Spain, Belgium, Netherlands, Luxembourg, Romania, Mexico, New
-   Zealand, United States, Canada, Australia, Ireland) where a transit
-   visa may be needed even to stay airside. 15 verified entries (Vietnam
-   6, Indonesia 3, Philippines 3, Thailand 3), all official sources only.
-   Places a passport can transit without a visa do not appear.
+3. **Transit visa** (`data/transit.json`): 6 destinations (United
+   Kingdom, Mexico, New Zealand, United States, Canada, Australia)
+   where a transit visa may be needed even to stay airside. 15 verified
+   entries (Vietnam 6, Indonesia 3, Philippines 3, Thailand 3), all
+   official sources only. Places a passport can transit without a visa
+   do not appear.
 
 Destinations that could not be verified are omitted, not guessed.
 
@@ -63,17 +63,19 @@ could be read; the exceptions are labelled on the entry and listed in
 Inspired by [The Nepali Passport Diaries](https://nepalipassportdiaries.therashverse.com/)
 ([RashikaKarki/Nepali-Passport-Diaries](https://github.com/RashikaKarki/Nepali-Passport-Diaries)),
 a single-passport Jekyll + YAML guide. Passport Switch generalises the idea
-to multiple passports with a toggle, in plain HTML/CSS/JS + JSON. No data
+to multiple passports with a toggle, as a Vite + React + TypeScript +
+Tailwind app over the same JSON dataset. No data
 was copied from that site; every rule here was researched fresh.
 
 ## Running locally
 
-No build step. Serve the folder over HTTP (plain `file://` blocks the JSON
-fetch in most browsers):
+Requires Node 20+ and npm. Install once, then run the dev server or a
+production build:
 
 ```bash
-python3 -m http.server 8000
-# open http://127.0.0.1:8000
+npm install
+npm run dev     # Vite dev server with hot reload
+npm run build   # type-check (tsc) + production build into dist/
 ```
 
 Check the data:
@@ -85,9 +87,12 @@ python3 -m pytest tests/ -q
 
 ## Structure
 
-- `index.html`, `assets/style.css`, `assets/app.js`: the site. No
-  frameworks. Relative paths only, so the same files work locally and on
-  GitHub Pages project pages.
+- `index.html`, `src/main.tsx`, `src/App.tsx`, `src/index.css`: the site
+  (Vite + React + TypeScript + Tailwind). The entry data is imported
+  directly from `data/*.json` at build time; nothing is fetched at
+  runtime. `vite.config.ts` uses a relative base (`./`) so the same
+  build works served from the `/passport/` subpath or a domain root.
+  See `DESIGN.md` for the design system and data-wiring notes.
 - `data/passports.json`, `data/rules.json`, `data/substitute_visa.json`,
   `data/transit.json`: the dataset.
 - `scripts/validate_data.py`: schema and sanity checks for all four files.
@@ -98,8 +103,16 @@ python3 -m pytest tests/ -q
 
 ## Deploying with GitHub Pages
 
+Build, then push the built output to the `gh-pages` branch manually:
+
+```bash
+npm run build   # output in dist/
+```
+
 Settings → Pages → Build and deployment → Deploy from a branch → branch
-`main`, folder `/ (root)`. Save. No custom domain is configured for v1.
+`gh-pages`, folder `/ (root)`. The `main` branch holds source only; the
+live site serves whatever is on `gh-pages`. No custom domain is
+configured.
 
 ## Disclaimer
 
